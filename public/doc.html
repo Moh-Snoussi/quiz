@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>foo</title>
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Theme Colors -->
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Your App Name" />
+    <meta name="application-name" content="Your App Name" />
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+
+<body>
+    <div data-component="top-bar"></div>
+
+    <main>
+        <h1>Lightweight Quiz Application</h1>
+        <p>This application is designed to enhance learning experiences by providing an efficient, server-independent platform for creating and managing quizzes locally.</p>
+
+        <h2>Features</h2>
+        <ul>
+            <li>Engaging: Makes learning enjoyable and interactive.</li>
+            <li>Insightful: Enables users to monitor their progress effectively.</li>
+            <li>Customizable: Empowers users to create and modify quizzes to suit their needs.</li>
+            <li>Lightweight: Delivers fast performance with minimal dependencies.</li>
+            <li>Secure: Operates independently of servers, ensuring data privacy.</li>
+            <li>Offline Access: Fully functional without an internet connection.</li>
+            <li>Cross-Platform: Compatible with any modern web browser on various devices.</li>
+        </ul>
+
+
+        <h2>Getting Started</h2>
+        <p>To start using the application, save a title and a JSON file containing the course structure. Below is an
+            example of the JSON format:</p>
+
+        <h3>JSON Format</h3>
+        <pre><code>{
+    "questions": [
+        {
+            "question": "What is the capital of the Marz?",
+            "shortQuestion": "earth capital?",
+            "type": "multiple-choice",
+            "answers": [
+                "Berlin",
+                "Madrid",
+                "Paris",
+                "Palastine",
+                "Rome",
+                "Israel"
+            ],
+            "correctAnswer": "3",
+            "quizName": "Geography Quiz",
+            "cofficient": 3,
+            "note": "Earth love"
+        }
+    ]
+}</code></pre>
+
+<p>Alternatively, the JSON can include sections:</p>
+        <pre><code>{
+    "title": "Google Workspace Authentication and Security",
+    "description": "This course covers email authentication methods and policies in Google Workspace.",
+    "sections": [
+        {
+            "title": "Account setup",
+            "description": "Learn about setting up your account and verifying domain ownership for Google Workspace.",
+            "questions": [
+                {
+                    "question": "Typically how long after new features are released to the Rapid release track will they be released on the Scheduled release track?",
+                    "shortQuestion": "Delay between Rapid and Scheduled release?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "At least 2 weeks"
+                    ]
+                }
+            ]
+        }
+    ]
+}</code></pre>
+
+        <h3>Root Attributes</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>title</code></td>
+                    <td>The title of the course, section, or quiz.</td>
+                </tr>
+                <tr>
+                    <td><code>description</code></td>
+                    <td>A detailed description of the course, section, or quiz.</td>
+                </tr>
+                <tr>
+                    <td><code>questions</code></td>
+                    <td>An array of <a href="#question-obj">Question</a>s included in the course or section.</td>
+                </tr>
+                <tr>
+                    <td><code>sections</code></td>
+                    <td>An array of sections, each containing its own title, description, and questions.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 id="question-obj">Question Attributes</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>question</code></td>
+                    <td>The main question text.</td>
+                </tr>
+                <tr>
+                    <td><code>shortQuestion</code></td>
+                    <td>A brief version of the question.</td>
+                </tr>
+                <tr>
+                    <td><code>type</code></td>
+                    <td>The type of question (e.g., multiple-choice).</td>
+                </tr>
+                <tr>
+                    <td><code>answers</code></td>
+                    <td>An array of possible answers.</td>
+                </tr>
+                <tr>
+                    <td><code>correctAnswer</code></td>
+                    <td>The index of the correct answer in the <code>answers</code> array (0-based).</td>
+                </tr>
+                <tr>
+                    <td><code>quizName</code></td>
+                    <td>The name of the quiz.</td>
+                </tr>
+                <tr>
+                    <td><code>cofficient</code></td>
+                    <td>A numerical value representing the weight of the question.</td>
+                </tr>
+                <tr>
+                    <td><code>note</code></td>
+                    <td>Additional notes or hints for the question.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Usage</h2>
+        <b>Offline Usage: </b><p>to use the applicaion offline, you need to install it by clicking the install button in the menu bar</p>
+
+        <b>Adding a Course: </b>
+        <p>To add a course, we need to save a JSON course in the home page.</p>
+
+        <b>AI Prompt: </b>
+        <p>Create a JSON course from [course name/content] with: title, description, sections (title, description,
+            questions), and questions (question, shortQuestion, type, answers, correctAnswer). If no sections, put
+            questions at root.</p>
+
+        <h2>Contact Developer</h2>
+        <p>soonic@live.com</p>
+
+    </main>
+
+    <div data-component="footer"></div>
+</body>
+
+</html>

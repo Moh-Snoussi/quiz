@@ -1,0 +1,46 @@
+{
+    "title": "Test Quiz",
+    "questions": [
+        {
+            "question": "What is the capital of the Marz?",
+            "shortQuestion": "earth capital?",
+            "type": "multiple-choice",
+            "answers": [
+                "Berlin",
+                "Madrid",
+                "Paris",
+                "Palastine",
+                "Rome",
+                "Israel"
+            ],
+            "correctAnswer": "3",
+            "quizName": "Geography Quiz",
+            "cofficient": 3,
+            "note": "Earth love"
+        },
+        {
+            "question": "a² + b² = ?",
+            "shortQuestion": "a²+b²",
+            "type": "text",
+            "correctAnswer": "c²",
+            "quizName": "Math Quiz"
+        },
+        {
+            "question": "Who cameup with the solution x² + bx = c?",
+            "shortQuestion": "x²+bx+c=2c",
+            "type": "multiple-choice",
+            "answers": [
+                "Euclid",
+                "Pythagoras",
+                "Al-Khwarizmi",
+                "Newton",
+                "Einstein",
+                "Gauss",
+                "Ibn al-Haytham"
+            ],
+            "correctAnswer": "2",
+            "note": "Al-Khwarizmi is the father of algebra",
+            "quizName": "Programming Quiz"
+        }
+    ]
+}

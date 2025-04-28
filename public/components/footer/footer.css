@@ -1,0 +1,17 @@
+, {
+  height: 100px;
+}
+
+.footer-container {
+  left: 50%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px
+}
+
+
