@@ -2,7 +2,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Learning Path</title>
+    <title>Learning</title>
 
     <!-- PWA Manifest -->
     <link rel="manifest" href="/site.webmanifest">
@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <div data-component="top-bar" class="component-top-bar" data-component-id="top-bar-50"><style>
+    <div data-component="top-bar" class="component-top-bar" data-component-id="top-bar-2"><style>
   :root {
     --logo-height: 40px;
     --logo-width: 40px;
@@ -129,26 +129,26 @@
 
 <script>
   import("/components/top-bar/top-bar.js").then(mod => {
-    if (mod.default) new mod.default('top-bar-50');
+    if (mod.default) new mod.default('top-bar-2');
   });
 </script></div>
     <main>
-        <div data-component="quiz-setter" class="component-quiz-setter" data-component-id="quiz-setter-13"><style>
-  [data-component-id="quiz-setter-13"] .quiz-setter-container {
+        <div data-component="quiz-setter" class="component-quiz-setter" data-component-id="quiz-setter-1"><style>
+  [data-component-id="quiz-setter-1"] .quiz-setter-container {
     display: flex;
     flex-direction: column;
     padding: 1rem;
     margin: 1rem;
   }
 
-  [data-component-id="quiz-setter-13"] input[type="text"] {
+  [data-component-id="quiz-setter-1"] input[type="text"] {
     width: 100%;
     margin-bottom: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
 
-  [data-component-id="quiz-setter-13"] textarea {
+  [data-component-id="quiz-setter-1"] textarea {
     width: 100%;
     height: 200px;
     margin-bottom: 1rem;
@@ -162,21 +162,21 @@
     cursor: pointer;
   }
 
-  [data-component-id="quiz-setter-13"] .notify--error {
+  [data-component-id="quiz-setter-1"] .notify--error {
     color: red;
   }
 
-  [data-component-id="quiz-setter-13"] .notify--success {
+  [data-component-id="quiz-setter-1"] .notify--success {
     color: green;
   }
 
-  [data-component-id="quiz-setter-13"] .quiz-list {
+  [data-component-id="quiz-setter-1"] .quiz-list {
     text-align: right;
     margin-top: 1rem;
     padding: 0;
   }
 
-  [data-component-id="quiz-setter-13"] li {
+  [data-component-id="quiz-setter-1"] li {
     list-style: none;
     margin-bottom: 0.5rem;
     cursor: pointer;
@@ -200,7 +200,7 @@
     <table class="quiz-list">
     </table>
   </div>
-  <template data-component-template-id="QuizSetterQuizSetter-13" data-component-template="QuizSetter-row">
+  <template data-component-template-id="QuizSetterQuizSetter-1" data-component-template="QuizSetter-row">
     <tr>
       <td>
         <div class="quiz-title">__TITLE__</div>
@@ -220,17 +220,17 @@
 
 <script>
   import("/components/quiz-setter/quiz-setter.js").then(mod => {
-    if (mod.default) new mod.default('quiz-setter-13');
+    if (mod.default) new mod.default('quiz-setter-1');
   });
 </script></div>
     </main>
-    <div data-component="footer" class="component-footer" data-component-id="footer-50"><style>
-  [data-component-id="footer-50"],
-  [data-component-id="footer-50"] {
+    <div data-component="footer" class="component-footer" data-component-id="footer-2"><style>
+  [data-component-id="footer-2"],
+  [data-component-id="footer-2"] {
     height: 100px;
   }
 
-  [data-component-id="footer-50"] .footer-container {
+  [data-component-id="footer-2"] .footer-container {
     left: 50%;
     position: fixed;
     bottom: 0;
@@ -253,7 +253,7 @@
 
 <script>
   import("/components/footer/footer.js").then(mod => {
-    if (mod.default) new mod.default('footer-50');
+    if (mod.default) new mod.default('footer-2');
   });
 </script></div>
 
