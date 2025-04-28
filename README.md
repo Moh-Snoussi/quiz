@@ -1,6 +1,6 @@
 # Lightweight Quiz Application
 
-This repository contains a lightweight quiz application designed to enhance learning experiences by providing an efficient, server-independent platform for creating and managing quizzes locally.
+This repository contains a lightweight quiz application designed to enhance learning experiences by providing an efficient, server and internet-independent platform for creating and managing quizzes locally.
 
 ## Features
 
@@ -116,3 +116,26 @@ Create a JSON course from [course name/content] with: title, description, sectio
 ## Contact
 
 For any inquiries or support, contact the developer at: [soonic@live.com](mailto:soonic@live.com).
+
+## Deployment
+
+Initially, the application needs to be served somehow. You can use any web server, but here are two common methods:
+
+### Using Apache2
+
+To deploy the application using Apache2:
+
+1. Move the virtual host configuration file to the Apache sites-available directory:
+   ```bash
+   sudo mv apps-quiz.conf /etc/apache2/sites-available/
+   ```
+2. Enable the site configuration:
+   ```bash
+   sudo a2ensite apps-quiz.conf
+   ```
+3. Reload Apache to apply the changes:
+   ```bash
+   sudo systemctl reload apache2
+   ```
+
+The application will now be accessible at `http://quiz.local`. Ensure that `quiz.local` is added to your `/etc/hosts` file for local development.
