@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="en"><head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Settings</title>
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Theme Colors -->
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Your App Name">
+    <meta name="application-name" content="Your App Name">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+    <div data-component="top-bar" class="component-top-bar" data-component-id="top-bar-868"><style>
+  :root {
+    --logo-height: 40px;
+    --logo-width: 40px;
+  }
+
+  .top-bar-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .top-bar-logo {
+    height: var(--logo-height, 35px);
+    width: var(--logo-width, 35px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  /* Added styles to ensure the toggle button stays in the same position and animates smoothly */
+  .menu-toggle {
+    background-color: unset;
+    border: none;
+    color: #854e4e;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .top-bar-menu.open+.menu-toggle {
+    transform: rotate(90deg);
+  }
+
+  /* Added styles to make the menu items horizontal and enable horizontal scrolling for the container */
+  .top-bar-menu {
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    transform: translateX(150vw);
+    transition: transform 0.2s ease-out;
+  }
+
+  .top-bar-menu ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding-right: 2rem;
+    margin: 0;
+  }
+
+  .top-bar-menu li {
+    margin-right: 1rem;
+  }
+
+  .top-bar-menu li a {
+    text-decoration: none;
+    color: #854e4e;
+    transition: background-color 0.3s ease-in-out;
+    text-transform: uppercase;
+    padding: 0.1rem 1rem;
+    border-radius: 5px;
+  }
+
+  .top-bar-menu li a:hover {
+    background-color: #deffd7;
+  }
+
+  .top-bar-menu.open {
+    display: flex;
+    transform: translateX(0);
+    transition: transform 0.2s ease-out;
+  }
+
+  li[data-top-bar-menu-item] {
+    display: flex;
+    align-items: center;
+    /* vertical center */
+    justify-content: center;
+    /* horizontal center */
+    list-style: none;
+  }
+</style>
+
+  <div class="top-bar-container">
+    <div class="top-bar-logo">
+      <a href="/" class="logo-link" target="_self">
+        <img width="30" src="/assets/icons/mda.svg" alt="Logo" class="logo-image">
+      </a>
+    </div>
+    <nav class="top-bar-menu" data-top-bar-menu="">
+      <ul data-top-bar-list="">
+        <template data-top-bar-menu-template="">
+          <li data-top-bar-menu-item=""><a href="#" target="_blank">Menu Item </a></li>
+        </template>
+      </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+  </div>
+
+<script>
+  import("/components/top-bar/top-bar.js").then(mod => {
+    if (mod.default) new mod.default('top-bar-868');
+  });
+</script></div>
+
+    <main>
+        <h1>Settings</h1>
+
+        <h2>Color Scheme</h2>
+        <div data-component="colorScheme" class="component-colorScheme" data-component-id="colorScheme-217"><style>
+  [data-component-id="colorScheme-217"] * {
+    /* scoped to the component */
+    color: hsl(var(--hue, 0), 70%, 60%);
+  }
+
+  [data-component-id="colorScheme-217"] .colorScheme-container {
+    border: 1px solid hsl(var(--hue, 0), 70%, 60%);
+    mix-blend-mode: difference;
+    padding: 1rem;
+    margin: 1rem;
+  }
+</style>
+
+<label for="color-scheme">Choose a color scheme:</label>
+  <select id="color-scheme" name="color-scheme">
+    <option value="light">Light</option>
+    <option value="dark">Dark</option>
+    <option value="system">System Default</option>
+  </select>
+
+<script>
+  import("/components/colorScheme/colorScheme.js").then(mod => {
+    if (mod.default) new mod.default('colorScheme-217');
+  });
+</script></div>
+    </main>
+
+    <div data-component="footer" class="component-footer" data-component-id="footer-868"><style>
+  [data-component-id="footer-868"],
+  [data-component-id="footer-868"] {
+    height: 100px;
+  }
+
+  [data-component-id="footer-868"] .footer-container {
+    left: 50%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px
+  }
+</style>
+
+  <div class="footer-container">
+    <div alt="Footer Icon" class="img footer-icon" title="Zero Server Trust-Applications">
+      <a>
+        <img width="50" src="/assets/icons/zst-white.svg" alt="Zero Server Trust-Applications">
+      </a>
+    </div>
+  </div>
+
+<script>
+  import("/components/footer/footer.js").then(mod => {
+    if (mod.default) new mod.default('footer-868');
+  });
+</script></div>
+
+<script>
+      const evt = new EventSource('/__reload__');
+      evt.onmessage = () => location.reload();
+    </script></body></html>
