@@ -41,6 +41,8 @@ export default class Play extends BaseComponent {
         const sectionQrParams = urlParams.get('section');
 
         window.addToQueryParams = this.addToQueryParams;
+        // save last quiz name to local storage
+        localStorage.setItem('lastQuizName', quizName);
 
 
         if (!sectionQrParams && Array.isArray(this.quizObj.sections)) {
@@ -73,7 +75,7 @@ export default class Play extends BaseComponent {
         const attempts = questions.reduce((acc, question) => (parseFloat(question.attempts) || 0) + acc, 0);
         const bar = questions.reduce((acc, question) => (parseFloat(question.cofficient) || 1) + acc, 0);
 
-        const avg =  score / bar * 10;
+        const avg = score / bar * 10;
         const target = questions.reduce((acc, question) => (parseFloat(question.cofficient) || 1) + acc, 0);
 
 

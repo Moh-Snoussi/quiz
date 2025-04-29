@@ -79,8 +79,27 @@ export default class QuizSetter extends BaseComponent {
         });
     }
 
-    loaded() {
-        console.log('Quiz-setter loaded');
+    async loaded() {
+            // check if url has a lastPlayed param
+        const urlParams = new URLSearchParams(window.location.search);
+
+        const logoClick = urlParams.get('logoNavigation');
+        const quizName = window.localStorage.getItem('lastQuizName');
+        const obj = window.localStorage.getItem(quizName);
+
+
+        if (!logoClick && obj !== null) {
+            try {
+                const quizObj = JSON.parse(obj);
+                window.location.href = await this.getPublicPath('quiz.html', {
+                    name: quizName,
+                });
+            } catch (e) {
+                // remove the lastPlayed param, is not a valid json
+                urlParams.delete('logoNavigation');
+                history.replaceState({}, '', window.location.pathname + '?' + urlParams.toString());
+            }
+        }
     }
 
     addJsonSaver() {
