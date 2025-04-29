@@ -39,7 +39,7 @@ export default class MultiChoiceHandler {
         }
 
         // correctAnswers are indexes, let's get the values
-        correctAnswers = correctAnswers.map((index) => question.answers[index]);
+        correctAnswers = correctAnswers.map((index) => String(question.answers[index]));
 
         let score = 0;
         const cofficient = question.cofficient || 1;
