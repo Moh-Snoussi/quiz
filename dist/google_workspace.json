@@ -1,134 +1,218 @@
 {
-    "title": "Google Workspace Authentication and Security",
-    "description": "This course covers email authentication methods and policies in Google Workspace.",
+    "title": "Google workspace",
+    "description": "Google Workspace assessment.",
     "sections": [
         {
-            "title": "Account setup",
-            "description": "Learn about setting up your account and verifying domain ownership for Google Workspace.",
+            "title": "Gmail Basics",
+            "description": "Understand the basics of calendar settings and management.",
             "questions": [
                 {
-                    "question": "Typically how long after new features are released to the Rapid release track will they be released on the Scheduled release track?",
-                    "shortQuestion": "Delay between Rapid and Scheduled release?",
+                    "question": "Which of the following settings cannot be set from the Gmail service settings?",
+                    "shortQuestion": "Setting not controlled in Gmail service?",
                     "type": "multiple-choice",
                     "answers": [
-                        "At least 2 weeks",
-                        "At least 4 months",
-                        "At least 1 week",
-                        "At least 1 month"
+                        "Allow users to set Gmail themes",
+                        "Allow users to delegate access to their mailbox",
+                        "Default language",
+                        "Name format"
                     ],
-                    "correctAnswer": 3,
-                    "quizName": "Account Setup Basics",
-                    "cofficient": 3,
-                    "note": "Remember: Scheduled release gives admins time to prepare. It's longer than just a week!"
+                    "correctAnswer": 2,
+                    "quizName": "Gmail Settings",
+                    "cofficient": 1,
+                    "note": "Review Exercise #1 - Configure common user settings."
                 },
                 {
-                    "question": "What must you do before you can start to use Google Workspace services?",
-                    "shortQuestion": "First step before using Google Workspace?",
+                    "question": "Which of the following actions can be taken on a message when an attachment compliance rule is matched? (Choose 3)",
+                    "shortQuestion": "Actions for attachment compliance rule?",
                     "type": "multiple-choice",
                     "answers": [
-                        "Configure MX records to point to Google.",
-                        "Provide Google with proof of identity.",
-                        "All these.",
-                        "Verify that you own the domain that you want to associate with Google Workspace."
+                        "Deliver message",
+                        "Quarantine message",
+                        "Reject message",
+                        "Modify message"
                     ],
-                    "correctAnswer": 3,
-                    "quizName": "Account Setup Basics",
-                    "cofficient": 3,
-                    "note": "Tip: Google needs to be sure you actually control the domain before allowing services!"
+                    "correctAnswer": [
+                        0,
+                        1,
+                        2
+                    ],
+                    "quizName": "Gmail Compliance",
+                    "cofficient": 2,
+                    "note": "Only 3 actions are correct: Deliver, Quarantine, Reject."
                 },
                 {
-                    "question": "What type of DNS record allows receiving mail servers to verify that the sending servers are authorized to send mail on your domain’s behalf?",
-                    "shortQuestion": "DNS record to verify authorized sending servers?",
+                    "question": "Which of these settings do the users control from their Gmail settings? (Choose 2)",
+                    "shortQuestion": "User controls in Gmail?",
                     "type": "multiple-choice",
                     "answers": [
-                        "Mail Exchanger (MX) record.",
-                        "Sender Policy Framework (SPF) record.",
-                        "Google Site Verification record.",
-                        "CNAME (Alias) record."
+                        "Display language for the Gmail interface",
+                        "Add POP3 accounts to the user’s inbox",
+                        "Create a personal email alias",
+                        "Name format (e.g., First, Last)"
                     ],
-                    "correctAnswer": 1,
-                    "quizName": "Account Setup Basics",
-                    "cofficient": 3,
-                    "note": "Hint: Think about verifying 'who can send emails' — not who receives them."
+                    "correctAnswer": [
+                        0,
+                        1
+                    ],
+                    "quizName": "User Gmail Settings",
+                    "cofficient": 1,
+                    "note": "Users manage their display language and add POP3 accounts."
+                }
+            ]
+        },
+        {
+            "title": "Calendar Basics",
+            "description": "Understand the basics of calendar settings and management.",
+            "questions": [
+                {
+                    "question": "Which Calendar settings can an administrator control for everyone in the organization? (Choose 2)",
+                    "shortQuestion": "Admin control settings?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Highest level of external sharing for primary calendars",
+                        "Time zone selections for calendar display",
+                        "Access to individual calendar labs",
+                        "Default level of internal sharing for primary calendars",
+                        "Calendar delegation to other users"
+                    ],
+                    "correctAnswer": [
+                        0,
+                        3
+                    ]
                 },
                 {
-                    "question": "How does GCDS sync directory information?",
-                    "shortQuestion": "How does GCDS sync directories?",
+                    "question": "What are Calendar Resources? (Choose 2)",
+                    "shortQuestion": "Calendar resources?",
                     "type": "multiple-choice",
                     "answers": [
-                        "It updates Google Workspace with information from the local LDAP directory.",
-                        "It updates the local LDAP directory with Google Workspace information.",
-                        "It provides a two-way sync that relies on object modified dates to determine which directory wins.",
-                        "GCDS is used for provisioning only."
-                    ],
-                    "correctAnswer": 0,
-                    "quizName": "Adding Users",
-                    "cofficient": 3,
-                    "note": "Focus: GCDS is about pushing your local directory data to Google, not the other way around."
-                },
-                {
-                    "question": "What is the minimal amount of characters required of Google Workspace passwords?",
-                    "shortQuestion": "Minimum password length?",
-                    "type": "multiple-choice",
-                    "answers": [
-                        "12 characters",
-                        "8 characters",
-                        "6 characters",
-                        "10 characters"
-                    ],
-                    "correctAnswer": 1,
-                    "quizName": "Adding Users",
-                    "cofficient": 3,
-                    "note": "Think basic security standards: not too long, but still secure enough."
-                },
-                {
-                    "question": "When adding users individually, how are passwords established?",
-                    "shortQuestion": "How are passwords set when adding users individually?",
-                    "type": "multiple-choice",
-                    "answers": [
-                        "The admin can enter a password manually or allow the console to generate a temporary password for the new user.",
-                        "Admins need to upload a default password to Google Workspace before adding any users.",
-                        "Google Workspace requires the admin to manually add passwords for every single user that is added to the domain.",
-                        "None of these."
-                    ],
-                    "correctAnswer": 0,
-                    "quizName": "Adding Users",
-                    "cofficient": 3,
-                    "note": "Hint: Google gives flexibility to admins when setting initial passwords."
-                },
-                {
-                    "question": "Which of the following are required when adding multiple users via a CSV file? (Choose 2)",
-                    "shortQuestion": "Required fields for CSV user upload?",
-                    "type": "multiple-choice",
-                    "answers": [
-                        "Password",
-                        "Middle Name",
-                        "First Name",
-                        "Home Address",
-                        "Job Title"
+                        "Bookable equipment",
+                        "Calendar dates",
+                        "Bookable conference rooms",
+                        "Contacts"
                     ],
                     "correctAnswer": [
                         0,
                         2
-                    ],
-                    "quizName": "Adding Users",
-                    "cofficient": 3,
-                    "note": "Reminder: Focus on basic credentials needed to create a user account."
+                    ]
                 },
                 {
-                    "question": "Your company just acquired a 100-employee startup and you quickly need to add the new employees to your domain. Using the Admin console, which is the most efficient way to add new users all at once?",
-                    "shortQuestion": "Most efficient way to add many users?",
+                    "question": "What can users control when it comes to their Calendar?",
+                    "shortQuestion": "User Calendar controls?",
                     "type": "multiple-choice",
                     "answers": [
-                        "Have them create their own accounts with the “Invite users” option.",
-                        "Add the new users manually",
-                        "Add all the new users at once from a .csv file.",
-                        "Use GCDS to provision your new users."
+                        "Users control what they share internally",
+                        "Users control what they share externally from their secondary calendars",
+                        "Users control what they share externally from their primary calendar",
+                        "Users can create their own resources"
+                    ],
+                    "correctAnswer": [
+                        0,
+                        1,
+                        2
+                    ]
+                },
+                {
+                    "question": "What are recommended to be configured before adding resources to the organization? (Choose 2)",
+                    "shortQuestion": "Setup before adding resources?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Buildings",
+                        "Locations",
+                        "Features",
+                        "Groups to provide access to each resource"
+                    ],
+                    "correctAnswer": [
+                        0,
+                        2
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Drive and Docs",
+            "description": "Assessment covering Drive sharing defaults, file recovery, ownership transfer, external sharing protections, and shared drive management.",
+            "questions": [
+                {
+                    "question": "Your company wants to adopt the policy that new documents will be shared internally with everyone in the company. What’s the recommended way to set this up?",
+                    "shortQuestion": "Default internal sharing setup?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Have users save their docs to a Google Group that everyone belongs to",
+                        "Change Link Sharing Defaults to 'ON - Primary target audience with the link'",
+                        "Have users save their docs to a shared drive that everyone belongs to",
+                        "Have users save their docs to a My Drive folder that is shared with everyone"
+                    ],
+                    "correctAnswer": 1,
+                    "quizName": "Internal Sharing Policy",
+                    "cofficient": 1,
+                    "note": "The correct method is to change Link Sharing Defaults to internal sharing."
+                },
+                {
+                    "question": "A user left your company last month and you deleted their Google Workspace account 15 days ago. You have been contacted as the administrator and asked if you can recover the deleted user's documents. What should you do?",
+                    "shortQuestion": "Recover deleted user's documents?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Advise the requester that you cannot restore a deleted user's files.",
+                        "Restore the files from the deleted user's account",
+                        "Restore the user, transfer the files to a new owner, and delete the user again.",
+                        "Advise the requestor that 14 days after account deletion, all data is purged so you cannot recover any documents"
                     ],
                     "correctAnswer": 2,
-                    "quizName": "Adding Users",
-                    "cofficient": 3,
-                    "note": "Hint: Think bulk upload — a simple file can save a lot of time!"
+                    "quizName": "User Data Recovery",
+                    "cofficient": 1,
+                    "note": "If within 20 days, restore the user, transfer files, then delete again."
+                },
+                {
+                    "question": "From which places can you transfer file ownership from one user to another? (Choose 2)",
+                    "shortQuestion": "Ways to transfer file ownership?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "From the user's My Drive folder",
+                        "From the Drive and Docs service settings page",
+                        "The user's profile in the admin console",
+                        "When deleting a user from the admin console"
+                    ],
+                    "correctAnswer": [
+                        1,
+                        3
+                    ],
+                    "quizName": "Ownership Transfer",
+                    "cofficient": 2,
+                    "note": "File ownership transfer is available from Drive and Docs settings or during user deletion."
+                },
+                {
+                    "question": "Your company allows external sharing of documents but your CEO is concerned about how documents are shared externally. As the administrator, which additional protections might you put in place? (Choose 2)",
+                    "shortQuestion": "Protections for external sharing?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Require a Google sign in when viewing a shared file",
+                        "Enable the feature that warns users when sharing outside the organization",
+                        "Allow users to share publicly",
+                        "Ensure users are only allowed to share with users in the global directory"
+                    ],
+                    "correctAnswer": [
+                        0,
+                        1
+                    ],
+                    "quizName": "External Sharing Protections",
+                    "cofficient": 2,
+                    "note": "Use warning and sign-in requirements to enhance external sharing security."
+                },
+                {
+                    "question": "Which of the following actions can you NOT take as administrator from the Managed shared drives area in the admin console?",
+                    "shortQuestion": "Action NOT possible in Managed shared drives?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Manage members",
+                        "View drive contents",
+                        "Restore a deleted drive or files",
+                        "Delete a shared drive",
+                        "Manage shared drive sharing settings"
+                    ],
+                    "correctAnswer": 2,
+                    "quizName": "Shared Drive Management",
+                    "cofficient": 1,
+                    "note": "Admins cannot restore deleted drives or files from Managed shared drives view."
                 }
             ]
         }
