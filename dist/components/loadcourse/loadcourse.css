@@ -1,0 +1,13 @@
+
+* {
+
+    /* scoped to the component */
+    color: hsl(var(--hue, 0), 70%, 60%);
+}
+
+.loadcourse-container {
+    border: 1px solid hsl(var(--hue, 0), 70%, 60%);
+    mix-blend-mode: difference;
+    padding: 1rem;
+    margin: 1rem;
+}

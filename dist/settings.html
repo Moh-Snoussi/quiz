@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <div data-component="top-bar" class="component-top-bar" data-component-id="top-bar-4"><style>
+    <div data-component="top-bar" class="component-top-bar" data-component-id="top-bar-288"><style>
   :root {
     --logo-height: 40px;
     --logo-width: 40px;
@@ -129,49 +129,42 @@
 
 <script>
   import("/components/top-bar/top-bar.js").then(mod => {
-    if (mod.default) new mod.default('top-bar-4');
+    if (mod.default) new mod.default('top-bar-288');
   });
 </script></div>
 
     <main>
         <h1>Settings</h1>
+        <div data-component="settings" class="component-settings" data-component-id="settings-42">
 
-        <h2>Color Scheme</h2>
-        <div data-component="colorScheme" class="component-colorScheme" data-component-id="colorScheme-1"><style>
-  [data-component-id="colorScheme-1"] * {
-    /* scoped to the component */
-    color: hsl(var(--hue, 0), 70%, 60%);
-  }
-
-  [data-component-id="colorScheme-1"] .colorScheme-container {
-    border: 1px solid hsl(var(--hue, 0), 70%, 60%);
-    mix-blend-mode: difference;
-    padding: 1rem;
-    margin: 1rem;
-  }
-</style>
-
-<label for="color-scheme">Choose a color scheme:</label>
+  <h2>Color Scheme</h2>
+  <label for="color-scheme">Choose a color scheme:</label>
   <select id="color-scheme" name="color-scheme">
     <option value="light">Light</option>
     <option value="dark">Dark</option>
     <option value="system">System Default</option>
   </select>
+  <h2>Load course</h2>
+  // loads the course json from a url
+  <label for="course-url">Course URL:</label>
+  <input type="text" id="course-url" name="course-url" placeholder="https://example.com/course.json">
+  <button id="load-course">Load Course</button>
+  <p id="load-course-message"></p>
 
 <script>
-  import("/components/colorScheme/colorScheme.js").then(mod => {
-    if (mod.default) new mod.default('colorScheme-1');
+  import("/components/settings/settings.js").then(mod => {
+    if (mod.default) new mod.default('settings-42');
   });
 </script></div>
     </main>
 
-    <div data-component="footer" class="component-footer" data-component-id="footer-4"><style>
-  [data-component-id="footer-4"],
-  [data-component-id="footer-4"] {
+    <div data-component="footer" class="component-footer" data-component-id="footer-288"><style>
+  [data-component-id="footer-288"],
+  [data-component-id="footer-288"] {
     height: 100px;
   }
 
-  [data-component-id="footer-4"] .footer-container {
+  [data-component-id="footer-288"] .footer-container {
     left: 50%;
     position: fixed;
     bottom: 0;
@@ -194,7 +187,7 @@
 
 <script>
   import("/components/footer/footer.js").then(mod => {
-    if (mod.default) new mod.default('footer-4');
+    if (mod.default) new mod.default('footer-288');
   });
 </script></div>
 

@@ -110,5 +110,46 @@ export default class Question {
             Object.values(obj).forEach(value => removeAttrs(value, attrs));
         }
     }
+
+//     Attribute	Description
+// title	The title of the course, section, or quiz.
+// description	A detailed description of the course, section, or quiz.
+// questions	An array of Questions included in the course or section.
+// sections	An array of sections, each containing its own title, description, and questions.
+
+// question	The main question text.
+// shortQuestion	A brief version of the question.
+// type	The type of question (e.g., multiple-choice, string).
+// answers	An array of possible answers.
+// correctAnswer	The index of the correct answer in the answers array (0-based).
+// quizName	The name of the quiz.
+// cofficient	(optional, default 1)A numerical value representing the weight of the question.
+// note:	Additionalnote (optioinal) notes or hints for the question.
+    static isValid(data) {
+        if (typeof data !== 'object' || data === null) {
+            return false;
+        }
+
+        const hasValidTitle = typeof data.title === 'string' && data.title.trim() !== '';
+        const hasValidDescription = typeof data.description === 'string';
+
+        const hasValidQuestions = Array.isArray(data.questions) && data.questions.every(question => {
+            return typeof question.question === 'string' && question.question.trim() !== '' &&
+                   Array.isArray(question.answers) && question.answers.length > 0 &&
+                   typeof question.correctAnswer === 'number' && question.correctAnswer >= 0 && question.correctAnswer < question.answers.length;
+        });
+
+        const hasValidSections = Array.isArray(data.sections) && data.sections.every(section => {
+            return typeof section.title === 'string' && section.title.trim() !== '' &&
+                   typeof section.description === 'string' &&
+                   Array.isArray(section.questions) && section.questions.every(question => {
+                       return typeof question.question === 'string' && question.question.trim() !== '' &&
+                              Array.isArray(question.answers) && question.answers.length > 0 &&
+                              typeof question.correctAnswer === 'number' && question.correctAnswer >= 0 && question.correctAnswer < question.answers.length;
+                   });
+        });
+
+        return hasValidTitle && hasValidDescription && (hasValidQuestions || hasValidSections);
+    }
 }
 

@@ -23,7 +23,7 @@ export default class ColorScheme extends BaseComponent {
             }
         }
 
-        // Retrieve the saved color scheme from localStorage before setting it
+        // Apply the saved color scheme on page load
         const savedScheme = localStorage.getItem('settings-color-scheme') || 'system';
         applyColorScheme(savedScheme);
         document.getElementById('color-scheme').value = savedScheme;
