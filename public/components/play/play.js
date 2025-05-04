@@ -49,7 +49,11 @@ export default class Play extends BaseComponent {
             this.showOnSections(this.quizObj);
             return;
         } else if (Array.isArray(this.quizObj.sections)) {
-            questions = this.quizObj.sections.filter(section => sectionQrParams === section.title).map(question => question.questions).flat();
+            if (sectionQrParams === 'all') {
+                questions = this.questionService.getAllQuestions(this.quizObj);
+            } else {
+                questions = this.quizObj.sections.filter(section => sectionQrParams === section.title).map(question => question.questions).flat();
+            }
         }
 
         this.container.setAttribute('data-score-target', this.questionService.getTotalCofficient(questions));
@@ -131,7 +135,7 @@ export default class Play extends BaseComponent {
                     '__SECTION__': paramsValue,
                     '__DESCRIPTION__': item.description || '',
                     '__KEY__': paramsKey,
-                    '__ATTEMPTS__': item.questions.reduce((acc, question) => (parseFloat(question.attempts) || 0) + acc, 0) / item.questions.length,
+                    '__ATTEMPTS__': this.questionService.getTotalPlayed(item),
                     '__SCORE__': item.questions.reduce((acc, question) => (parseFloat(question.score) || 1) + acc, 0),
                     '__TARGET__': item.questions.reduce((acc, question) => (parseFloat(question.cofficient) || 1) + acc, 0),
                 });
@@ -141,6 +145,17 @@ export default class Play extends BaseComponent {
 
                 sectionContainer.appendChild(sectionDiv);
             }
+            // a section for all:
+            const allSectionDiv = this.getTemplate('section', {
+                '__SECTION__': 'all',
+                '__DESCRIPTION__': 'All questions',
+                '__KEY__': 'section',
+                '__ATTEMPTS__': this.questionService.getTotalPlayed(quizObj) / this.questionService.getAllQuestions(quizObj).length,
+                '__SCORE__': '',
+                '__TARGET__':  ''
+            });
+
+            sectionContainer.appendChild(allSectionDiv);
         }
     }
 
