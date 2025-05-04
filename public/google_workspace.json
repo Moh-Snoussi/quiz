@@ -3,6 +3,392 @@
     "description": "Google Workspace assessment.",
     "sections": [
         {
+            "title": "User account provisioning",
+            "description": "Quiz: User account provisioning<br>Passing score: 80%",
+            "questions": [
+                {
+                    "question": "A company with 5,000 employees is transitioning to Google Workspace. They need a solution to automatically create and update user accounts in Google Workspace based on their existing on-premises Microsoft Active Directory data. This solution should also allow for the de-provisioning of accounts when users are removed from Active Directory. Which service can be used to achieve this user provisioning?",
+                    "shortQuestion": "Automatic user provisioning from AD to Google Workspace",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Data Migration Service",
+                        "Google Cloud Directory Sync",
+                        "Google Cloud Identity Platform",
+                        "Directory Sync"
+                    ],
+                    "correctAnswer": [
+                        1
+                    ],
+                    "note": "<p><strong>Google Cloud Directory Sync (GCDS)</strong> allows automatic provisioning, de-provisioning, and synchronization from Active Directory to Google Workspace.</p><p>Learn more: <a href='https://support.google.com/a/answer/106368?hl=en' target='_blank'>Set up GCDS</a></p>"
+                },
+                {
+                    "question": "Your company is switching to Google Workspace for productivity and collaboration. You need to make the onboarding process smooth and secure for over 1,000 employees. Your company already uses Okta for identity management. How can you leverage your existing Okta infrastructure to manage user identities and access in Google Workspace?",
+                    "shortQuestion": "Use Okta to manage Google Workspace identities",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Use Google Cloud Directory Sync (GCDS) to synchronize user data from your on-premises Active Directory to Google Workspace.",
+                        "Manually create individual user accounts in Google Workspace and assign them appropriate roles.",
+                        "Configure federated single sign-on (SSO) with Okta as your identity provider, allowing users to access Google Workspace using their existing Okta credentials.",
+                        "Create a custom application within Okta that provides limited access to specific Google Workspace services."
+                    ],
+                    "correctAnswer": [
+                        2
+                    ],
+                    "note": "<p><strong>Federated SSO with Okta</strong> allows centralized identity management and secure access to Google Workspace using existing credentials.</p><p>Learn more: <a href='https://support.google.com/a/answer/60224?hl=en' target='_blank'>Set up SSO with a third-party identity provider</a></p>"
+                },
+                {
+                    "question": "What happens when a user is provisioned in Google Workspace?",
+                    "shortQuestion": "Result of provisioning a user",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "A Workspace account is added for the user.",
+                        "Predefined administrator roles are granted to the user’s account.",
+                        "Access is automatically granted to all Google Workspace services.",
+                        "The Google Workspace admin transfers company data into the user’s account."
+                    ],
+                    "correctAnswer": [
+                        0
+                    ],
+                    "note": "<p>Provisioning adds the user to the Google Workspace domain but does not automatically assign roles or migrate data.</p><p>Learn more: <a href='https://support.google.com/a/answer/33310' target='_blank'>Add a user account</a></p>"
+                },
+                {
+                    "question": "Every user is assigned to a structure when their user account is created. What is the name of this structure?",
+                    "shortQuestion": "User assignment structure in Workspace",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "A structured resource",
+                        "A Google group",
+                        "An organizational unit",
+                        "A target audience"
+                    ],
+                    "correctAnswer": [
+                        2
+                    ],
+                    "note": "<p>Organizational units (OUs) define how users are grouped for policy management in Google Workspace.</p><p>Learn more: <a href='https://support.google.com/a/answer/4352075' target='_blank'>About OUs</a></p>"
+                },
+                {
+                    "question": "Your company has a new policy where all sales team members, except directors, are prohibited from using Gemini in Google Workspace. As the Workspace administrator, how can you efficiently configure organizational units (OUs) to meet this policy?",
+                    "shortQuestion": "Restrict Gemini for sales but allow directors",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Put all members of the sales team in one OU, restrict Gemini access to that OU, but place the sales directors in a separate configuration group that allows the use of Gemini.",
+                        "Put members of the sales team in one OU, restrict Gemini access to that OU, and then also place the sales directors in a child OU that allows the use of Gemini.",
+                        "Put all members of the sales team in one OU, restrict Gemini access to that OU, but place the sales directors in a separate access group that allows the use of Gemini.",
+                        "Create an OU for members of the sales team who need to use Gemini and a separate OU for the rest of the team."
+                    ],
+                    "correctAnswer": [
+                        2
+                    ],
+                    "note": "<p><strong>Access groups</strong> allow specific features like Gemini to be enabled for selected users within an OU, offering flexibility without breaking OU structure.</p><p>Learn more: <a href='https://support.google.com/a/answer/7541900?hl=en' target='_blank'>Control access with configuration groups</a></p>"
+                },
+                {
+                    "question": "You are the Google Workspace admin for a school district with multiple schools. All students need access to the same services, but staff require access to additional services. Each school needs different settings configured for their staff. How should you organize your user accounts to efficiently give everyone the right access and control?",
+                    "shortQuestion": "OU structure for schools with students and staff",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Create a single OU for the entire school district and apply all settings at this top level.",
+                        "Create separate OUs for “students” and “staff,” and then create child OUs for each school under these OUs.",
+                        "Create separate OUs for “students” and “staff,” and then create child OUs for each school under the “staff” OU.",
+                        "Create separate OUs for each school, and then create child OUs for \"staff\" and \"students\" within each school's OU."
+                    ],
+                    "correctAnswer": [
+                        2
+                    ],
+                    "note": "<p>This structure supports shared student settings and unique staff settings per school, giving the best balance of simplicity and control.</p><p>Learn more: <a href='https://support.google.com/a/answer/182537' target='_blank'>Best practices for OUs in schools</a></p>"
+                }
+            ]
+        },
+        {
+            "title": "Basics",
+            "description": "A short quiz covering key concepts for managing and setting up Google Workspace.",
+            "questions": [
+                {
+                    "question": "In the Google Workspace admin console, which section allows you to manage two-step verification and passwords?",
+                    "shortQuestion": "Manage 2-step verification in Workspace",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Directory",
+                        "Security",
+                        "Rules",
+                        "Account"
+                    ],
+                    "correctAnswer": [
+                        1
+                    ],
+                    "note": "<p>Two-step verification and password policies are managed under the <strong>Security</strong> section of the Google Workspace Admin Console.</p><p>Learn more: <a href='https://support.google.com/a/answer/9176657' target='_blank'>Google Admin: Set up 2-step verification</a></p>"
+                },
+                {
+                    "question": "What is the essential first step to activate and use Google Workspace services for your domain?",
+                    "shortQuestion": "First step to activate Google Workspace",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Provide Google with proof of identity.",
+                        "Purchase a service-based license for your organization.",
+                        "Configure MX records to point to Google.",
+                        "Verify that you own the domain you want to associate with Google Workspace."
+                    ],
+                    "correctAnswer": [
+                        3
+                    ],
+                    "note": "<p>Before using Google Workspace, you must <strong>verify domain ownership</strong> to prove you control it.</p><p>Learn more: <a href='https://support.google.com/a/answer/60216' target='_blank'>Verify your domain for Google Workspace</a></p>"
+                },
+                {
+                    "question": "What are two types of information commonly found in DNS records?",
+                    "shortQuestion": "Common DNS record types",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Sender Policy Framework",
+                        "Lightweight Directory Access Protocols",
+                        "Domain-based Message Authentication Protocols",
+                        "DomainKeys Identified Mail",
+                        "Mail Exchanger Records"
+                    ],
+                    "correctAnswer": [
+                        0,
+                        4
+                    ],
+                    "note": "<p>DNS records like <strong>SPF</strong> and <strong>MX</strong> are essential for email authentication and routing.</p><p>Learn more: <a href='https://support.google.com/a/answer/48090' target='_blank'>DNS records overview - Google Workspace</a></p>"
+                }
+            ]
+        },
+        {
+            "title": "Account setup",
+            "description": "Learn about setting up your account and verifying domain ownership for Google Workspace.",
+            "questions": [
+                {
+                    "question": "Typically how long after new features are released to the Rapid release track will they be released on the Scheduled release track?",
+                    "shortQuestion": "Delay between Rapid and Scheduled release?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "At least 2 weeks",
+                        "At least 4 months",
+                        "At least 1 week",
+                        "At least 1 month"
+                    ],
+                    "correctAnswer": 3,
+                    "quizName": "Account Setup Basics",
+                    "cofficient": 3,
+                    "note": "Remember: Scheduled release gives admins time to prepare. It's longer than just a week!"
+                },
+                {
+                    "question": "What must you do before you can start to use Google Workspace services?",
+                    "shortQuestion": "First step before using Google Workspace?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Configure MX records to point to Google.",
+                        "Provide Google with proof of identity.",
+                        "All these.",
+                        "Verify that you own the domain that you want to associate with Google Workspace."
+                    ],
+                    "correctAnswer": 3,
+                    "quizName": "Account Setup Basics",
+                    "cofficient": 3,
+                    "note": "Tip: Google needs to be sure you actually control the domain before allowing services!"
+                },
+                {
+                    "question": "What type of DNS record allows receiving mail servers to verify that the sending servers are authorized to send mail on your domain’s behalf?",
+                    "shortQuestion": "DNS record to verify authorized sending servers?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Mail Exchanger (MX) record.",
+                        "Sender Policy Framework (SPF) record.",
+                        "Google Site Verification record.",
+                        "CNAME (Alias) record."
+                    ],
+                    "correctAnswer": 1,
+                    "quizName": "Account Setup Basics",
+                    "cofficient": 3,
+                    "note": "Hint: Think about verifying 'who can send emails' — not who receives them."
+                },
+                {
+                    "question": "How does GCDS sync directory information?",
+                    "shortQuestion": "How does GCDS sync directories?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "It updates Google Workspace with information from the local LDAP directory.",
+                        "It updates the local LDAP directory with Google Workspace information.",
+                        "It provides a two-way sync that relies on object modified dates to determine which directory wins.",
+                        "GCDS is used for provisioning only."
+                    ],
+                    "correctAnswer": 0,
+                    "quizName": "Adding Users",
+                    "cofficient": 3,
+                    "note": "Focus: GCDS is about pushing your local directory data to Google, not the other way around."
+                },
+                {
+                    "question": "What is the minimal amount of characters required of Google Workspace passwords?",
+                    "shortQuestion": "Minimum password length?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "12 characters",
+                        "8 characters",
+                        "6 characters",
+                        "10 characters"
+                    ],
+                    "correctAnswer": 1,
+                    "quizName": "Adding Users",
+                    "cofficient": 3,
+                    "note": "Think basic security standards: not too long, but still secure enough."
+                },
+                {
+                    "question": "When adding users individually, how are passwords established?",
+                    "shortQuestion": "How are passwords set when adding users individually?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "The admin can enter a password manually or allow the console to generate a temporary password for the new user.",
+                        "Admins need to upload a default password to Google Workspace before adding any users.",
+                        "Google Workspace requires the admin to manually add passwords for every single user that is added to the domain.",
+                        "None of these."
+                    ],
+                    "correctAnswer": 0,
+                    "quizName": "Adding Users",
+                    "cofficient": 3,
+                    "note": "Hint: Google gives flexibility to admins when setting initial passwords."
+                },
+                {
+                    "question": "Which of the following are required when adding multiple users via a CSV file? (Choose 2)",
+                    "shortQuestion": "Required fields for CSV user upload?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Password",
+                        "Middle Name",
+                        "First Name",
+                        "Home Address",
+                        "Job Title"
+                    ],
+                    "correctAnswer": [
+                        0,
+                        2
+                    ],
+                    "quizName": "Adding Users",
+                    "cofficient": 3,
+                    "note": "Reminder: Focus on basic credentials needed to create a user account."
+                },
+                {
+                    "question": "Your company just acquired a 100-employee startup and you quickly need to add the new employees to your domain. Using the Admin console, which is the most efficient way to add new users all at once?",
+                    "shortQuestion": "Most efficient way to add many users?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Have them create their own accounts with the “Invite users” option.",
+                        "Add the new users manually",
+                        "Add all the new users at once from a .csv file.",
+                        "Use GCDS to provision your new users."
+                    ],
+                    "correctAnswer": 2,
+                    "quizName": "Adding Users",
+                    "cofficient": 3,
+                    "note": "Hint: Think bulk upload — a simple file can save a lot of time!"
+                }
+            ]
+        },
+        {
+            "title": "Organizational Units and Settings",
+            "description": "Understand how settings are inherited across OUs and how to manage access based on organizational structure.",
+            "questions": [
+                {
+                    "question": "How do settings inherit across OUs?",
+                    "shortQuestion": "How are settings inherited across OUs?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "All settings are the same for each level within the organizational hierarchy.",
+                        "You must manually configure the settings for each new organizational unit you add to your account.",
+                        "All settings for all OUs, no matter the hierarchy, start out the same.",
+                        "Each child OU inherits settings from its parent, which you can then customize."
+                    ],
+                    "correctAnswer": [
+                        3
+                    ]
+                },
+                {
+                    "question": "Which of these statements are true about Google Workspace OUs? (Choose 2)",
+                    "shortQuestion": "Which statements are true about Workspace OUs?",
+                    "type": "multiple-select",
+                    "answers": [
+                        "OUs are comprised of groups.",
+                        "A user may belong to multiple OUs.",
+                        "A Google Workspace account may contain multiple OUs.",
+                        "A user may belong to one OU only."
+                    ],
+                    "correctAnswer": [
+                        2,
+                        3
+                    ]
+                },
+                {
+                    "question": "You want to enable Blogger for your full-time employees but restrict access to your contractors. Which method could be used to do this?",
+                    "shortQuestion": "How can you restrict Blogger for contractors?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Move the contractors into an OU and turn off Blogger for that OU.",
+                        "Restrict access to Blogger in the Blogger profile for each contractor.",
+                        "Disable the Blogger service in the user profile for each contractor.",
+                        "Create a Google group, add the contractors to the group, and turn off Blogger for the group."
+                    ],
+                    "correctAnswer": [
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Admin Role Management",
+            "description": "Learn how to assign admin roles, manage privileges, and create custom roles for effective user management.",
+            "questions": [
+                {
+                    "question": "When assigning an administrative role to a single user, where in the user's account page do you assign the role?",
+                    "shortQuestion": "Where do you assign admin roles in a user's account?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "License",
+                        "Security",
+                        "Groups",
+                        "Admin roles and privileges"
+                    ],
+                    "correctAnswer": [
+                        3
+                    ]
+                },
+                {
+                    "question": "You can assign more than one administrator role to a user.",
+                    "shortQuestion": "Can a user have multiple admin roles?",
+                    "type": "true-false",
+                    "answers": [
+                        "True",
+                        "False"
+                    ],
+                    "correctAnswer": [
+                        0
+                    ]
+                },
+                {
+                    "question": "Privileges in a pre-built administrator role can be customized.",
+                    "shortQuestion": "Can pre-built admin role privileges be changed?",
+                    "type": "true-false",
+                    "answers": [
+                        "True",
+                        "False"
+                    ],
+                    "correctAnswer": [
+                        0
+                    ]
+                },
+                {
+                    "question": "What’s the recommended way to create a custom administrator role for your domain?",
+                    "shortQuestion": "How should you create a custom admin role?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Create a new role and choose the required privileges.",
+                        "Choose the custom administrator option when manually adding the user.",
+                        "Duplicate an existing role and edit the privileges.",
+                        "Create a new role based on a role template."
+                    ],
+                    "correctAnswer": [
+                        0
+                    ]
+                }
+            ]
+        },
+        {
             "title": "Gmail Basics",
             "description": "Understand the basics of calendar settings and management.",
             "questions": [
@@ -32,9 +418,9 @@
                         "Modify message"
                     ],
                     "correctAnswer": [
-                        0,
                         1,
-                        2
+                        2,
+                        3
                     ],
                     "quizName": "Gmail Compliance",
                     "cofficient": 2,

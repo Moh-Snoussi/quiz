@@ -1,7 +1,15 @@
-<div class="settings-container">
-    <h1>
-        settings
-    </h1>
+<h2>Color Scheme</h2>
+<label for="color-scheme">Choose a color scheme:</label>
+<select id="color-scheme" name="color-scheme">
+    <option value="light">Light</option>
+    <option value="dark">Dark</option>
+    <option value="system">System Default</option>
+</select>
 
-    <p> Edit me in /home/moamed/Projects/quiz2/public/components/settings/settings.html</p>
-</div>
+<h2>Load course</h2>
+// loads the course json from a url
+
+<label for="course-url">Course URL:</label>
+<input type="text" id="course-url" name="course-url" placeholder="https://example.com/course.json" />
+<button id="load-course">Load Course</button>
+<p id="load-course-message"></p>
