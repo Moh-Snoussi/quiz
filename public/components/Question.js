@@ -114,8 +114,8 @@ export default class Question {
 
     static saveCourse(quizName, data) {
 
-        if (!quizName.startsWith('mda-')) {
-            quizName = 'mda-' + quizName;
+        if (!quizName.startsWith('mda-quiz')) {
+            quizName = 'mda-quiz-' + quizName;
         }
 
         const quizObj = Question.parse(data)
