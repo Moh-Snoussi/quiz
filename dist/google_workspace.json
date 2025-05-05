@@ -351,7 +351,7 @@
                 {
                     "question": "You can assign more than one administrator role to a user.",
                     "shortQuestion": "Can a user have multiple admin roles?",
-                    "type": "true-false",
+                    "type": "multiple-choice",
                     "answers": [
                         "True",
                         "False"
@@ -363,7 +363,7 @@
                 {
                     "question": "Privileges in a pre-built administrator role can be customized.",
                     "shortQuestion": "Can pre-built admin role privileges be changed?",
-                    "type": "true-false",
+                    "type": "multiple-choice",
                     "answers": [
                         "True",
                         "False"

@@ -26,7 +26,7 @@
 
 <body>
     <div class="body-container">
-        <div data-component="top-bar" class="component-top-bar" data-component-id="top-bar-111"><style>
+        <div data-component="top-bar" class="component-top-bar" data-component-id="top-bar-3"><style>
   :root {
     --logo-height: 40px;
     --logo-width: 40px;
@@ -129,36 +129,36 @@
 
 <script>
   import("/components/top-bar/top-bar.js").then(mod => {
-    if (mod.default) new mod.default('top-bar-111');
+    if (mod.default) new mod.default('top-bar-3');
   });
 </script></div>
         <main>
-            <div data-component="play" class="component-play" data-component-id="play-28"><style>
+            <div data-component="play" class="component-play" data-component-id="play-1"><style>
   :root {
     --progress-start-color: rgba(0, 0, 255, 0);
     --progress-end-color: rgba(0, 0, 255, 0.5);
     --text-color: #000;
   }
 
-  [data-component-id="play-28"] .quiz-player-container {
+  [data-component-id="play-1"] .quiz-player-container {
     padding: 0.5rem;
     margin: 0.5rem;
     text-align: center;
     margin-bottom: 3rem;
   }
 
-  [data-component-id="play-28"] .quiz-content {
+  [data-component-id="play-1"] .quiz-content {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
 
-  [data-component-id="play-28"] .text-success {
+  [data-component-id="play-1"] .text-success {
     color: green;
   }
 
-  [data-component-id="play-28"] .text-danger {
+  [data-component-id="play-1"] .text-danger {
     color: red;
   }
 
@@ -166,15 +166,15 @@
     margin: 0 auto;
   }
 
-  [data-component-id="play-28"] #quiz-question {
+  [data-component-id="play-1"] #quiz-question {
     transition: opacity 0.5s ease-in-out;
   }
 
-  [data-component-id="play-28"] #quiz-question.visible {
+  [data-component-id="play-1"] #quiz-question.visible {
     opacity: 1;
   }
 
-  [data-component-id="play-28"] .form-check {
+  [data-component-id="play-1"] .form-check {
     display: inline-block;
     margin: 10px;
     text-align: center;
@@ -182,25 +182,25 @@
     border-radius: 5px;
   }
 
-  [data-component-id="play-28"] .form-check.success .form-check-label {
+  [data-component-id="play-1"] .form-check.success .form-check-label {
     background-color: rgba(0, 212, 0, 0.4);
   }
 
-  [data-component-id="play-28"] .form-check.error .form-check-label {
+  [data-component-id="play-1"] .form-check.error .form-check-label {
     background-color: rgba(255, 0, 0, 0.4);
   }
 
-  [data-component-id="play-28"] .form-check.missing .form-check-label {
+  [data-component-id="play-1"] .form-check.missing .form-check-label {
     background-color: rgba(255, 0, 0, 0.4);
     /* Set initial background color */
     animation: background-missing 1s infinite alternate
   }
 
-  [data-component-id="play-28"] .form-check input {
+  [data-component-id="play-1"] .form-check input {
     display: none;
   }
 
-  [data-component-id="play-28"] .form-check label {
+  [data-component-id="play-1"] .form-check label {
     padding: 0.5rem;
     border: 2px solid #ccc;
     border-radius: 5px;
@@ -209,18 +209,18 @@
     display: inline-block;
   }
 
-  [data-component-id="play-28"] .form-check input:checked+label {
+  [data-component-id="play-1"] .form-check input:checked+label {
     background-color: lightblue;
     font-size: 1.2rem;
     border-color: lightblue;
     color: var(--text-color);
   }
 
-  [data-component-id="play-28"] .form-check input:checked+label {
+  [data-component-id="play-1"] .form-check input:checked+label {
     background-color: rgba(0, 178, 238, 0.3);
   }
 
-  [data-component-id="play-28"] .form-check img {
+  [data-component-id="play-1"] .form-check img {
     max-width: 100%;
     height: auto;
     display: block;
@@ -232,11 +232,11 @@
       background-color: rgba(255, 0, 0, 0.4);
     }
 
-    [data-component-id="play-28"] 50% {
+    [data-component-id="play-1"] 50% {
       background-color: rgba(255, 0, 0, 0.2);
     }
 
-    [data-component-id="play-28"] 100% {
+    [data-component-id="play-1"] 100% {
       background-color: rgba(255, 0, 0, 0.4);
     }
   }
@@ -246,7 +246,7 @@
       background-color: rgba(0, 212, 0, 0.4);
     }
 
-    [data-component-id="play-28"] 100% {
+    [data-component-id="play-1"] 100% {
       background-color: rgba(0, 212, 0, 0);
     }
   }
@@ -264,7 +264,7 @@
     --progress-bar-opacity: 0.3;
   }
 
-  [data-component-id="play-28"] #submit {
+  [data-component-id="play-1"] #submit {
     margin: 1rem;
     padding: 0.5rem;
     width: 200px;
@@ -280,7 +280,7 @@
     animation: move-background var(--progress-bar-animation-time) linear forwards;
   }
 
-  [data-component-id="play-28"] details {
+  [data-component-id="play-1"] details {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -288,11 +288,11 @@
     transition: all 0.3s ease;
   }
 
-  [data-component-id="play-28"] details[open] {
+  [data-component-id="play-1"] details[open] {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
-  [data-component-id="play-28"] #submit.paused {
+  [data-component-id="play-1"] #submit.paused {
     background: unset;
   }
 
@@ -319,7 +319,7 @@
       <div id="history"></div>
     </div>
   </div>
-  <template data-component-template-id="PlayPlay-28" data-component-template="Play-result">
+  <template data-component-template-id="PlayPlay-1" data-component-template="Play-result">
     <div style="text-align: center;">
       <h2>Results</h2>
       <p>Your score: <strong>__SCORE__</strong></p>
@@ -327,7 +327,7 @@
       <p>Average score: <strong>__AVG__</strong></p>
       <p>Target score: <strong>__TARGET__</strong></p>
     </div>
-  </template><template data-component-template-id="PlayPlay-28" data-component-template="Play-section">
+  </template><template data-component-template-id="PlayPlay-1" data-component-template="Play-section">
     <div class="section-container" style="cursor: pointer; padding: 1rem; margin: 1rem">
       <a title="__DESCRIPTION__" onclick="addToQueryParams('__KEY__', '__SECTION__', true)" ref="#" class="section-link">__SECTION__</a>
       <span class="attempts">__ATTEMPTS__</span>
@@ -337,17 +337,17 @@
 
 <script>
   import("/components/play/play.js").then(mod => {
-    if (mod.default) new mod.default('play-28');
+    if (mod.default) new mod.default('play-1');
   });
 </script></div>
         </main>
-        <div data-component="footer" class="component-footer" data-component-id="footer-111"><style>
-  [data-component-id="footer-111"],
-  [data-component-id="footer-111"] {
+        <div data-component="footer" class="component-footer" data-component-id="footer-3"><style>
+  [data-component-id="footer-3"],
+  [data-component-id="footer-3"] {
     height: 100px;
   }
 
-  [data-component-id="footer-111"] .footer-container {
+  [data-component-id="footer-3"] .footer-container {
     left: 50%;
     position: fixed;
     bottom: 0;
@@ -370,7 +370,7 @@
 
 <script>
   import("/components/footer/footer.js").then(mod => {
-    if (mod.default) new mod.default('footer-111');
+    if (mod.default) new mod.default('footer-3');
   });
 </script></div>
     </div>
