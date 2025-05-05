@@ -1,0 +1,81 @@
+{
+  "title": "Strategic Thinking Under Pressure",
+  "description": "This quiz is designed to assess your strategic thinking skills in high-pressure situations. Each question presents a scenario that requires you to think critically and make decisions that align with your long-term goals. Choose the answer that best reflects your approach to the situation.",
+  "questions": [
+    {
+      "question": "A part-time colleague is promoted despite less visible output. What’s the most rational first move?",
+      "shortQuestion": "Unexpected promotion?",
+      "type": "multiple-choice",
+      "answers": [
+        "Review what non-obvious value they may bring",
+        "Challenge the fairness of the decision directly",
+        "Withdraw to protect your own morale",
+        "Share concerns with others to find consensus"
+      ],
+      "correctAnswer": "0",
+      "quizName": "Cognitive Agility",
+      "cofficient": 7,
+      "note": "Perceived inequity often masks strategic value you haven't seen yet."
+    },
+    {
+      "question": "You're overlooked while someone else is praised. Which mindset leads to lasting progress?",
+      "shortQuestion": "Praise imbalance?",
+      "type": "multiple-choice",
+      "answers": [
+        "Extract what triggered their recognition and iterate",
+        "Request equal praise from management",
+        "Trust time will bring justice to your work",
+        "Detach emotionally to stay efficient"
+      ],
+      "correctAnswer": "0",
+      "quizName": "Ego Mastery",
+      "cofficient": 6,
+      "note": "Emulate signals that trigger recognition — don't demand it."
+    },
+    {
+      "question": "Your voice isn't heard in key meetings. What builds long-term influence?",
+      "shortQuestion": "No voice?",
+      "type": "multiple-choice",
+      "answers": [
+        "Deliver undeniable outcomes, then speak",
+        "Speak up more frequently to claim space",
+        "Align with influential colleagues",
+        "Skip low-value conversations"
+      ],
+      "correctAnswer": "0",
+      "quizName": "Strategic Visibility",
+      "cofficient": 6,
+      "note": "Lasting voice is earned through results, not volume."
+    },
+    {
+      "question": "Does staying late signal real value?",
+      "shortQuestion": "Late hours = value?",
+      "type": "multiple-choice",
+      "answers": [
+        "Not inherently — impact per unit time matters more",
+        "Yes — visibility equals trust",
+        "Only when others notice and appreciate it",
+        "Depends on whether others are also staying"
+      ],
+      "correctAnswer": "0",
+      "quizName": "Outcome Orientation",
+      "cofficient": 5,
+      "note": "Effort is respected. Impact is remembered."
+    },
+    {
+      "question": "What defines success that sustains emotional well-being?",
+      "shortQuestion": "Success = well-being?",
+      "type": "multiple-choice",
+      "answers": [
+        "Alignment with your core values and goals",
+        "A balance of money and influence",
+        "Freedom to work without supervision",
+        "Comparison-based validation over time"
+      ],
+      "correctAnswer": "0",
+      "quizName": "Purpose Awareness",
+      "cofficient": 7,
+      "note": "Alignment sustains what applause can’t."
+    }
+  ]
+}
