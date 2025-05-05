@@ -7,7 +7,7 @@ export default class Settings extends BaseComponent {
         this.questionService = Question;
     }
 
- loaded() {
+    loaded() {
         document.getElementById('color-scheme').addEventListener('change', (event) => {
             const selectedScheme = event.target.value;
             localStorage.setItem('settings-color-scheme', selectedScheme);
@@ -29,26 +29,33 @@ export default class Settings extends BaseComponent {
         const savedScheme = localStorage.getItem('settings-color-scheme') || 'system';
         applyColorScheme(savedScheme);
         document.getElementById('color-scheme').value = savedScheme;
+
+        this.registerLoadCourse();
     }
 
 
-    loadCourse() {
-            this.container.querySelector('#load-course').addEventListener('click', function() {
-        const url = this.container.querySelector('#course-url').value;
-        fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                // Assuming you have a function to handle the loaded course data
-                if (this.questionService.isValid(data)) {
-                    this.questionService.loadCourse(data);
-                }
-                document.getElementById('load-course-message').innerText = 'Course loaded successfully!';
-            })
-            .catch(error => {
-                console.error('Error loading course:', error);
-                document.getElementById('load-course-message').innerText = 'Error loading course.';
-            });
-    });
+    registerLoadCourse() {
+        this.container.querySelector('#load-course').addEventListener('click', () => {
+            const url = this.container.querySelector('#course-url').value;
+            // the last part of the url is the course name without extension
+            const courseName = url.split('/').pop().split('.').shift();
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    // Assuming you have a function to handle the loaded course data
+                    const errors = this.questionService.getErrors(data);
+                    if (errors.length > 0) {
+                        document.getElementById('load-course-message').innerText = 'Errors found in course data: ' + errors.join(', ');
+                        return;
+                    }
+                    this.questionService.saveCourse(courseName, data);
+                    document.getElementById('load-course-message').innerText = 'Course loaded successfully!';
+                })
+                .catch(error => {
+                    console.error('Error loading course:', error);
+                    document.getElementById('load-course-message').innerText = 'Error loading course.';
+                });
+        });
     }
 
 }

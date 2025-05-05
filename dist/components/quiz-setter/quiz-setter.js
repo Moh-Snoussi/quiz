@@ -90,7 +90,6 @@ export default class QuizSetter extends BaseComponent {
 
         if (!logoClick && obj !== null) {
             try {
-                const quizObj = JSON.parse(obj);
                 window.location.href = await this.getPublicPath('quiz.html', {
                     name: quizName,
                 });

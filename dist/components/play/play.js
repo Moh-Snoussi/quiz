@@ -42,7 +42,11 @@ export default class Play extends BaseComponent {
 
         window.addToQueryParams = this.addToQueryParams;
         // save last quiz name to local storage
-        localStorage.setItem('lastQuizName', quizName);
+        const lastState = {name: quizName};
+        if (sectionQrParams) {
+            lastState.section = sectionQrParams;
+        }
+        localStorage.setItem('lastQuiz', JSON.stringify(lastState));
 
 
         if (!sectionQrParams && Array.isArray(this.quizObj.sections)) {
@@ -150,7 +154,7 @@ export default class Play extends BaseComponent {
                 '__SECTION__': 'all',
                 '__DESCRIPTION__': 'All questions',
                 '__KEY__': 'section',
-                '__ATTEMPTS__': this.questionService.getTotalPlayed(quizObj) / this.questionService.getAllQuestions(quizObj).length,
+                '__ATTEMPTS__': parseFloat(this.questionService.getTotalPlayed(quizObj) / this.questionService.getAllQuestions(quizObj).length).toFixed(2),
                 '__SCORE__': '',
                 '__TARGET__':  ''
             });

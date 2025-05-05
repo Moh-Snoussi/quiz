@@ -302,7 +302,7 @@
                 {
                     "question": "Which of these statements are true about Google Workspace OUs? (Choose 2)",
                     "shortQuestion": "Which statements are true about Workspace OUs?",
-                    "type": "multiple-select",
+                    "type": "multiple-choice",
                     "answers": [
                         "OUs are comprised of groups.",
                         "A user may belong to multiple OUs.",
@@ -363,7 +363,7 @@
                 {
                     "question": "Privileges in a pre-built administrator role can be customized.",
                     "shortQuestion": "Can pre-built admin role privileges be changed?",
-                    "type": "multiple-choice",
+                    "type": "true-false",
                     "answers": [
                         "True",
                         "False"

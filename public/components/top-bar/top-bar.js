@@ -30,6 +30,11 @@ export default class TopBar extends BaseComponent {
         this.toggleButton = this.container.querySelector('.menu-toggle');
         this.menuTemplate = this.container.querySelector('[data-top-bar-menu-template]');
 
+        // if app is installed, hide the install button
+        if (window.matchMedia('(display-mode: standalone)').matches) {
+            this.menuItem = this.menuItem.filter(item => item.label !== 'Instal');
+        }
+
         this.setMenuItems(...this.menuItem);
         this.registerInstallation()
 

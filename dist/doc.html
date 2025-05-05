@@ -26,112 +26,7 @@
 </head>
 
 <body>
-    <div data-component="top-bar" class="component-top-bar" data-component-id="top-bar-1"><style>
-  :root {
-    --logo-height: 40px;
-    --logo-width: 40px;
-  }
-
-  .top-bar-container {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .top-bar-logo {
-    height: var(--logo-height, 35px);
-    width: var(--logo-width, 35px);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  /* Added styles to ensure the toggle button stays in the same position and animates smoothly */
-  .menu-toggle {
-    background-color: unset;
-    border: none;
-    color: #854e4e;
-    font-size: 1.5rem;
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .top-bar-menu.open+.menu-toggle {
-    transform: rotate(90deg);
-  }
-
-  /* Added styles to make the menu items horizontal and enable horizontal scrolling for the container */
-  .top-bar-menu {
-    flex-direction: row;
-    overflow-x: auto;
-    white-space: nowrap;
-    scrollbar-width: thin;
-    transform: translateX(150vw);
-    transition: transform 0.2s ease-out;
-  }
-
-  .top-bar-menu ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    padding-right: 2rem;
-    margin: 0;
-  }
-
-  .top-bar-menu li {
-    margin-right: 1rem;
-  }
-
-  .top-bar-menu li a {
-    text-decoration: none;
-    color: #854e4e;
-    transition: background-color 0.3s ease-in-out;
-    text-transform: uppercase;
-    padding: 0.1rem 1rem;
-    border-radius: 5px;
-  }
-
-  .top-bar-menu li a:hover {
-    background-color: #deffd7;
-  }
-
-  .top-bar-menu.open {
-    display: flex;
-    transform: translateX(0);
-    transition: transform 0.2s ease-out;
-  }
-
-  li[data-top-bar-menu-item] {
-    display: flex;
-    align-items: center;
-    /* vertical center */
-    justify-content: center;
-    /* horizontal center */
-    list-style: none;
-  }
-</style>
-
-  <div class="top-bar-container">
-    <div class="top-bar-logo">
-      <a href="/?logoNavigation=true" class="logo-link" target="_self">
-        <img width="30" src="/assets/icons/mda.svg" alt="Logo" class="logo-image">
-      </a>
-    </div>
-    <nav class="top-bar-menu" data-top-bar-menu="">
-      <ul data-top-bar-list="">
-        <template data-top-bar-menu-template="">
-          <li data-top-bar-menu-item=""><a href="#" target="_blank">Menu Item </a></li>
-        </template>
-      </ul>
-    </nav>
-    <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
-  </div>
-
-<script>
-  import("/components/top-bar/top-bar.js").then(mod => {
-    if (mod.default) new mod.default('top-bar-1');
-  });
-</script></div>
+    <div data-component="top-bar" class="component-top-bar" data-component-id="top-bar-1">[object Promise]</div>
 
     <main>
         <h1>Lightweight Quiz Application</h1>
@@ -284,38 +179,7 @@
 
     </main>
 
-    <div data-component="footer" class="component-footer" data-component-id="footer-1"><style>
-  [data-component-id="footer-1"],
-  [data-component-id="footer-1"] {
-    height: 100px;
-  }
-
-  [data-component-id="footer-1"] .footer-container {
-    left: 50%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px
-  }
-</style>
-
-  <div class="footer-container">
-    <div alt="Footer Icon" class="img footer-icon" title="Zero Server Trust-Applications">
-      <a>
-        <img width="50" src="/assets/icons/zst-white.svg" alt="Zero Server Trust-Applications">
-      </a>
-    </div>
-  </div>
-
-<script>
-  import("/components/footer/footer.js").then(mod => {
-    if (mod.default) new mod.default('footer-1');
-  });
-</script></div>
+    <div data-component="footer" class="component-footer" data-component-id="footer-1">[object Promise]</div>
 
 <script>
       const evt = new EventSource('/__reload__');

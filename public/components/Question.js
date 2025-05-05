@@ -71,7 +71,7 @@ export default class Question {
         }, 0);
     }
 
-    static getAvgScore(data) {
+    static getAvgScore(data, fixedPoints = 2) {
         let questions = this.getAllQuestions(data);
 
         const { totalScore, totalWeight } = questions.reduce((acc, question) => {
@@ -81,7 +81,8 @@ export default class Question {
         }, { totalScore: 0, totalWeight: 0 });
 
         const avg = totalWeight > 0 ? totalScore / totalWeight : 0;
-        return avg;
+
+        return parseFloat(avg.toFixed(fixedPoints));
     }
 
     static getTotalCofficient(questions) {
@@ -111,45 +112,72 @@ export default class Question {
         }
     }
 
-//     Attribute	Description
-// title	The title of the course, section, or quiz.
-// description	A detailed description of the course, section, or quiz.
-// questions	An array of Questions included in the course or section.
-// sections	An array of sections, each containing its own title, description, and questions.
+    static saveCourse(quizName, data) {
 
-// question	The main question text.
-// shortQuestion	A brief version of the question.
-// type	The type of question (e.g., multiple-choice, string).
-// answers	An array of possible answers.
-// correctAnswer	The index of the correct answer in the answers array (0-based).
-// quizName	The name of the quiz.
-// cofficient	(optional, default 1)A numerical value representing the weight of the question.
-// note:	Additionalnote (optioinal) notes or hints for the question.
-    static isValid(data) {
+        if (!quizName.startsWith('mda-')) {
+            quizName = 'mda-' + quizName;
+        }
+
+        const quizObj = Question.parse(data)
+        window.localStorage.setItem(quizName, JSON.stringify(quizObj));
+    }
+
+    static parse(data) {
+        if (typeof data === 'string') {
+            try {
+                data = JSON.parse(data);
+            } catch (e) {
+                return;
+            }
+        }
+
+        return data;
+    }
+
+
+    //     Attribute	Description
+    // title	The title of the course, section, or quiz.
+    // description	A detailed description of the course, section, or quiz.
+    // questions	An array of Questions included in the course or section.
+    // sections	An array of sections, each containing its own title, description, and questions.
+
+    // question	The main question text.
+    // shortQuestion	A brief version of the question.
+    // type	The type of question (e.g., multiple-choice, string).
+    // answers	An array of possible answers.
+    // correctAnswer	The index of the correct answer in the answers array (0-based).
+    // quizName	The name of the quiz.
+    // cofficient	(optional, default 1)A numerical value representing the weight of the question.
+    // note:	Additionalnote (optioinal) notes or hints for the question.
+    static getErrors(data) {
+        const errors = [];
+        data = Question.parse(data);
         if (typeof data !== 'object' || data === null) {
-            return false;
+            errors.push('Invalid data format. Expected an object.');
         }
 
         const hasValidTitle = typeof data.title === 'string' && data.title.trim() !== '';
+        if (!hasValidTitle) {
+            errors.push('Invalid title format. Expected a non-empty string.');
+        }
+
+
         const hasValidDescription = typeof data.description === 'string';
+        if (!hasValidDescription) {
+            errors.push('Invalid description format. Expected a string.');
+        }
 
-        const hasValidQuestions = Array.isArray(data.questions) && data.questions.every(question => {
-            return typeof question.question === 'string' && question.question.trim() !== '' &&
-                   Array.isArray(question.answers) && question.answers.length > 0 &&
-                   typeof question.correctAnswer === 'number' && question.correctAnswer >= 0 && question.correctAnswer < question.answers.length;
+        const questions = Question.getAllQuestions(data);
+
+        const hasValidQuestions = questions.every(question => {
+            const isValid = typeof question.question === 'string' && question.question.trim() !== '';
+            if (!isValid) {
+                errors.push('Invalid question format. Expected a non-empty string, at question index: ', index);
+            }
         });
 
-        const hasValidSections = Array.isArray(data.sections) && data.sections.every(section => {
-            return typeof section.title === 'string' && section.title.trim() !== '' &&
-                   typeof section.description === 'string' &&
-                   Array.isArray(section.questions) && section.questions.every(question => {
-                       return typeof question.question === 'string' && question.question.trim() !== '' &&
-                              Array.isArray(question.answers) && question.answers.length > 0 &&
-                              typeof question.correctAnswer === 'number' && question.correctAnswer >= 0 && question.correctAnswer < question.answers.length;
-                   });
-        });
-
-        return hasValidTitle && hasValidDescription && (hasValidQuestions || hasValidSections);
+        return errors;
     }
+
 }
 
