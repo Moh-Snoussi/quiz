@@ -17,10 +17,12 @@ export default class BaseComponent {
     getTemplate(tempateName, replaceMap = {}) {
         let template = this.container.querySelector(`[data-component-template="${this.constructor.name + '-' + tempateName}"]`);
         if (!template) return;
+
         let el = this.fragmentToHtml(template.content.cloneNode(true));
         for (const [key, value] of Object.entries(replaceMap)) {
             el.innerHTML = this.replace(el.innerHTML, { [key]: value });
         }
+
         return el;
     }
 
@@ -39,7 +41,7 @@ export default class BaseComponent {
     fragmentToHtml(fragment) {
         const temp = document.createElement("div");
         temp.appendChild(fragment.cloneNode(true));
-        return temp.firstElementChild;
+        return temp;
     }
 
     replace(content, replaceMap) {
