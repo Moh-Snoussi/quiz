@@ -26,206 +26,358 @@
 
 <body>
     <div class="body-container">
-        <div data-component="top-bar" class="component-top-bar" data-component-id="top-bar-3"><style>:root  {
+        <div data-component="top-bar" class="component-top-bar" data-component-id="top-bar-27"><style>
+  :root {
     --logo-height: 40px;
     --logo-width: 40px;
-} .top-bar-container  {
+  }
+
+  .top-bar-container {
     display: flex;
     justify-content: space-between;
     position: relative;
     overflow: hidden;
-} .top-bar-logo  {
+  }
+
+  .top-bar-logo {
     height: var(--logo-height, 35px);
     width: var(--logo-width, 35px);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-} /* Added styles to ensure the toggle button stays in the same position and animates smoothly */
-.menu-toggle  {
+  }
+
+  /* Added styles to ensure the toggle button stays in the same position and animates smoothly */
+  .menu-toggle {
     background-color: unset;
     border: none;
     color: #854e4e;
     font-size: 1.5rem;
     transition: transform 0.3s ease-in-out;
-} .top-bar-menu.open+.menu-toggle  {
+  }
+
+  .top-bar-menu.open+.menu-toggle {
     transform: rotate(90deg);
-} /* Added styles to make the menu items horizontal and enable horizontal scrolling for the container */
-.top-bar-menu  {
+  }
+
+  /* Added styles to make the menu items horizontal and enable horizontal scrolling for the container */
+  .top-bar-menu {
     flex-direction: row;
     overflow-x: auto;
     white-space: nowrap;
     scrollbar-width: thin;
-
     transform: translateX(150vw);
     transition: transform 0.2s ease-out;
-} .top-bar-menu ul  {
+  }
+
+  .top-bar-menu ul {
     display: flex;
     flex-direction: row;
     list-style: none;
     padding-right: 2rem;
     margin: 0;
-} .top-bar-menu li  {
+  }
+
+  .top-bar-menu li {
     margin-right: 1rem;
-} .top-bar-menu li a  {
+  }
+
+  .top-bar-menu li a {
     text-decoration: none;
     color: #854e4e;
     transition: background-color 0.3s ease-in-out;
     text-transform: uppercase;
     padding: 0.1rem 1rem;
     border-radius: 5px;
-} .top-bar-menu li a:hover  {
+  }
+
+  .top-bar-menu li a:hover {
     background-color: #deffd7;
-} .top-bar-menu.open  {
+  }
+
+  .top-bar-menu.open {
     display: flex;
     transform: translateX(0);
     transition: transform 0.2s ease-out;
-} li[data-top-bar-menu-item]  {
+  }
+
+  li[data-top-bar-menu-item] {
     display: flex;
     align-items: center;
     /* vertical center */
     justify-content: center;
     /* horizontal center */
     list-style: none;
-}</style><div class="top-bar-container"><div class="top-bar-logo"><a href="/?logoNavigation=true" class="logo-link" target="_self"><img width="30" src="/assets/icons/mda.svg" alt="Logo" class="logo-image"></a></div><nav class="top-bar-menu" data-top-bar-menu=""><ul data-top-bar-list=""><template data-top-bar-menu-template=""><li data-top-bar-menu-item=""><a href="#" target="_blank">Menu Item</a></li></template></ul></nav><button class="menu-toggle" aria-label="Toggle Menu">☰</button></div><script>import("/components/top-bar/top-bar.js").then(mod => {
-        if (mod.default) new mod.default('top-bar-3');
-        });</script></div>
+  }
+</style>
+
+  <div class="top-bar-container">
+    <div class="top-bar-logo">
+      <a href="/?logoNavigation=true" class="logo-link" target="_self">
+        <img width="30" src="/assets/icons/mda.svg" alt="Logo" class="logo-image">
+      </a>
+    </div>
+    <nav class="top-bar-menu" data-top-bar-menu="">
+      <ul data-top-bar-list="">
+        <template data-top-bar-menu-template="">
+          <li data-top-bar-menu-item=""><a href="#" target="_blank">Menu Item </a></li>
+        </template>
+      </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+  </div>
+
+<script>
+  import("/components/top-bar/top-bar.js").then(mod => {
+    if (mod.default) new mod.default('top-bar-27');
+  });
+</script></div>
         <main>
-            <div data-component="play" class="component-play" data-component-id="play-1"><style>:root  {
+            <div data-component="play" class="component-play" data-component-id="play-7"><style>
+  :root {
     --progress-start-color: rgba(0, 0, 255, 0);
     --progress-end-color: rgba(0, 0, 255, 0.5);
     --text-color: #000;
-} [data-component-id="play-1"] .quiz-player-container {
+  }
+
+  [data-component-id="play-7"] .quiz-player-container {
     padding: 0.5rem;
     margin: 0.5rem;
     text-align: center;
     margin-bottom: 3rem;
-} [data-component-id="play-1"] .quiz-content {
+  }
+
+  [data-component-id="play-7"] .quiz-content {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-} [data-component-id="play-1"] .text-success {
+  }
+
+  [data-component-id="play-7"] .text-success {
     color: green;
-} [data-component-id="play-1"] .text-danger {
+  }
+
+  [data-component-id="play-7"] .text-danger {
     color: red;
-} #history  {
+  }
+
+  #history {
     margin: 0 auto;
-} [data-component-id="play-1"] #quiz-question {
+  }
+
+  [data-component-id="play-7"] #quiz-question {
     transition: opacity 0.5s ease-in-out;
-} [data-component-id="play-1"] #quiz-question.visible {
+  }
+
+  [data-component-id="play-7"] #quiz-question.visible {
     opacity: 1;
-} [data-component-id="play-1"] .form-check {
+  }
+
+  [data-component-id="play-7"] .form-check {
     display: inline-block;
     margin: 10px;
     text-align: center;
     transition: all 2s ease;
     border-radius: 5px;
-} [data-component-id="play-1"] .form-check.success .form-check-label {
+  }
+
+  [data-component-id="play-7"] .form-check.success .form-check-label {
     background-color: rgba(0, 212, 0, 0.4);
-} [data-component-id="play-1"] .form-check.error .form-check-label {
+  }
+
+  [data-component-id="play-7"] .form-check.error .form-check-label {
     background-color: rgba(255, 0, 0, 0.4);
-} [data-component-id="play-1"] .form-check.missing .form-check-label {
+  }
+
+  [data-component-id="play-7"] .form-check.missing .form-check-label {
     background-color: rgba(255, 0, 0, 0.4);
     /* Set initial background color */
     animation: background-missing 1s infinite alternate
-} [data-component-id="play-1"] .form-check input {
+  }
+
+  [data-component-id="play-7"] .form-check input {
     display: none;
-} [data-component-id="play-1"] .form-check label {
+  }
+
+  [data-component-id="play-7"] .form-check label {
     padding: 0.5rem;
     border: 2px solid #ccc;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
     display: inline-block;
-} [data-component-id="play-1"] .form-check input:checked+label {
+  }
+
+  [data-component-id="play-7"] .form-check input:checked+label {
     background-color: lightblue;
     font-size: 1.2rem;
     border-color: lightblue;
     color: var(--text-color);
-} [data-component-id="play-1"] .form-check input:checked+label {
+  }
+
+  [data-component-id="play-7"] .form-check input:checked+label {
     background-color: rgba(0, 178, 238, 0.3);
-} [data-component-id="play-1"] .form-check img {
+  }
+
+  [data-component-id="play-7"] .form-check img {
     max-width: 100%;
     height: auto;
     display: block;
     margin: auto;
-} @keyframes flash-background  {
+  }
+
+  @keyframes flash-background {
     0% {
-        background-color: rgba(255, 0, 0, 0.4);
-    } [data-component-id="play-1"] 50% {
-        background-color: rgba(255, 0, 0, 0.2);
-    } [data-component-id="play-1"] 100% {
-        background-color: rgba(255, 0, 0, 0.4);
+      background-color: rgba(255, 0, 0, 0.4);
     }
-} @keyframes background-missing  {
+
+    [data-component-id="play-7"] 50% {
+      background-color: rgba(255, 0, 0, 0.2);
+    }
+
+    [data-component-id="play-7"] 100% {
+      background-color: rgba(255, 0, 0, 0.4);
+    }
+  }
+
+  @keyframes background-missing {
     0% {
-        background-color: rgba(0, 212, 0, 0.4);
-    } [data-component-id="play-1"] 100% {
-        background-color: rgba(0, 212, 0, 0);
+      background-color: rgba(0, 212, 0, 0.4);
     }
-} @media (max-width: 768px)  {
+
+    [data-component-id="play-7"] 100% {
+      background-color: rgba(0, 212, 0, 0);
+    }
+  }
+
+  @media (max-width: 768px) {
     #sidebar-content {
-        margin-top: 20px;
+      margin-top: 20px;
     }
-} :root  {
+  }
+
+  :root {
     --progress-bar-animation-time: 5s;
     --progress-bar-color: rgba(151, 229, 255, 0.3);
     --progress-bar-color-rgb: 0, 178, 238;
     --progress-bar-opacity: 0.3;
-} [data-component-id="play-1"] #submit {
+  }
+
+  [data-component-id="play-7"] #submit {
     margin: 1rem;
     padding: 0.5rem;
     width: 200px;
     border: 2px solid #ccc;
-
     cursor: pointer;
     text-align: center;
-
     background: linear-gradient(to right,
-            var(--progress-bar-color) 10%,
-            rgba(var(--progress-bar-color-rgb), var(--progress-bar-opacity)) 38%,
-            rgba(var(--progress-bar-color-rgb), 0) 55%);
-
+        var(--progress-bar-color) 10%,
+        rgba(var(--progress-bar-color-rgb), var(--progress-bar-opacity)) 38%,
+        rgba(var(--progress-bar-color-rgb), 0) 55%);
     background-size: 200% 100%;
     background-position: left center;
     animation: move-background var(--progress-bar-animation-time) linear forwards;
-} [data-component-id="play-1"] details {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  transition: all 0.3s ease;
-} [data-component-id="play-1"] details[open] {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-} [data-component-id="play-1"] #submit.paused {
+  }
+
+  [data-component-id="play-7"] details {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+  }
+
+  [data-component-id="play-7"] details[open] {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  [data-component-id="play-7"] #submit.paused {
     background: unset;
-} @keyframes move-background  {
+  }
+
+  @keyframes move-background {
     from {
-        background-position: right center;
-    } to  {
-        background-position: left center;
+      background-position: right center;
     }
-}</style><div class="quiz-player-container"><div id="sections" class="text-center mb-4"></div><div class="quiz-content"><div id="question-container" class="mb-4"><div id="quiz-question" class="mt-4"></div></div><div id="submit" class="paused">Next</div><div id="result" class="mt-3"></div><hr style="color: white;border: solid 1px;width: 100%;"><div id="history"></div></div></div><template data-component-template-id="PlayPlay-1" data-component-template="Play-result"><div style="text-align: center;"><h2>Results</h2><p>Your score: <strong>__SCORE__</strong></p><p>Total attempts: <strong>__ATTEMPTS__</strong></p><p>Average score: <strong>__AVG__</strong></p><p>Target score: <strong>__TARGET__</strong></p></div></template><template data-component-template-id="PlayPlay-1" data-component-template="Play-section"><div onclick="addToQueryParams('__KEY__', '__SECTION__', true)" class="section-container" style="cursor: pointer; padding: 1rem; margin: 1rem"><a title="__DESCRIPTION__" class="section-link">__SECTION__</a> <span class="attempts">__ATTEMPTS__</span> <span class="score">__SCORE__/__TARGET__</span></div></template><script>import("/components/play/play.js").then(mod => {
-        if (mod.default) new mod.default('play-1');
-        });</script></div>
+
+    to {
+      background-position: left center;
+    }
+  }
+</style>
+
+  <div class="quiz-player-container">
+    <div id="sections" class="text-center mb-4"></div>
+    <div class="quiz-content">
+      <div id="question-container" class="mb-4">
+        <div id="quiz-question" class="mt-4"></div>
+      </div>
+      <div id="submit" class="paused">Next</div>
+      <div id="result" class="mt-3"></div>
+      <hr style="color: white;border: solid 1px;width: 100%;">
+      <div id="history"></div>
+    </div>
+  </div>
+  <template data-component-template-id="PlayPlay-7" data-component-template="Play-result">
+    <div style="text-align: center;">
+      <h2>Results</h2>
+      <p>Your score: <strong>__SCORE__</strong></p>
+      <p>Total attempts: <strong>__ATTEMPTS__</strong></p>
+      <p>Average score: <strong>__AVG__</strong></p>
+      <p>Target score: <strong>__TARGET__</strong></p>
+    </div>
+  </template><template data-component-template-id="PlayPlay-7" data-component-template="Play-section">
+    <div onclick="addToQueryParams('__KEY__', '__SECTION__', true)" class="section-container" style="cursor: pointer; padding: 1rem; margin: 1rem">
+      <a title="__DESCRIPTION__" class="section-link">__SECTION__</a>
+      <span class="attempts">__ATTEMPTS__</span>
+      <span class="score">__SCORE__/__TARGET__</span>
+    </div>
+  </template>
+
+<script>
+  import("/components/play/play.js").then(mod => {
+    if (mod.default) new mod.default('play-7');
+  });
+</script></div>
         </main>
-        <div data-component="footer" class="component-footer" data-component-id="footer-3"><style>[data-component-id="footer-3"] , [data-component-id="footer-3"]  {
-  height: 100px;
-} [data-component-id="footer-3"] .footer-container {
-  left: 50%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px
-}</style><div class="footer-container"><div alt="Footer Icon" class="img footer-icon" title="Zero Server Trust-Applications"><a><img width="50" src="/assets/icons/zst-white.svg" alt="Zero Server Trust-Applications"></a></div></div><script>import("/components/footer/footer.js").then(mod => {
-        if (mod.default) new mod.default('footer-3');
-        });</script></div>
+        <div data-component="footer" class="component-footer" data-component-id="footer-27"><style>
+  [data-component-id="footer-27"],
+  [data-component-id="footer-27"] {
+    height: 100px;
+  }
+
+  [data-component-id="footer-27"] .footer-container {
+    left: 50%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px
+  }
+</style>
+
+  <div class="footer-container">
+    <div alt="Footer Icon" class="img footer-icon" title="Zero Server Trust-Applications">
+      <a>
+        <img width="50" src="/assets/icons/zst-white.svg" alt="Zero Server Trust-Applications">
+      </a>
+    </div>
+  </div>
+
+<script>
+  import("/components/footer/footer.js").then(mod => {
+    if (mod.default) new mod.default('footer-27');
+  });
+</script></div>
     </div>
 
     <script src="/assets/js/main.js"></script>
 
-</body></html>
+<script>
+      const evt = new EventSource('/__reload__');
+      evt.onmessage = () => location.reload();
+    </script></body></html>

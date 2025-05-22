@@ -601,6 +601,57 @@
                     "note": "Admins cannot restore deleted drives or files from Managed shared drives view."
                 }
             ]
+        },
+        {
+            "title": "Data Governance",
+            "description": "This section covers how to effectively use labels for classifying and managing data within Google Workspace, enhancing organization, visibility, and security.",
+            "questions": [
+                {
+                    "question": "A marketing team is using Google Drive to store and share campaign assets that include images, videos, and documents. They want to use labels to organize these assets by campaign and year. How can this be done?",
+                    "shortQuestion": "How to organize Drive files by campaign/year?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Delete all existing labels and start with a clean slate.",
+                        "Create a rule to automatically apply labels to files based on their file type.",
+                        "Create new labels with names like 'Campaign 2023' and 'Campaign 2024'.",
+                        "Set permissions for labels to control who can view and edit specific files."
+                    ],
+                    "correctAnswer": 2,
+                    "quizName": "Classify data",
+                    "cofficient": 1,
+                    "note": "Creating specific labels improves organization and retrieval. <a href='https://support.google.com/a/answer/10075155' target='_blank'>Learn more</a>"
+                },
+                {
+                    "question": "A support team uses Gmail to respond to customer inquiries. They want to ensure that emails from important customers are easily identifiable and prioritized in their inboxes. How can this be done?",
+                    "shortQuestion": "How to prioritize key emails in Gmail?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Create a label named 'High-Priority Customer' and apply it to emails from those customers.",
+                        "Rely on the default Gmail labels (like \"Starred\" and \"Important\") to prioritize emails.",
+                        "Use a Google Workspace add-on to automatically categorize emails based on sender priority.",
+                        "Gmail does not currently support label classification."
+                    ],
+                    "correctAnswer": 0,
+                    "quizName": "Classify data",
+                    "cofficient": 1,
+                    "note": "Custom labels offer better visibility and control for priority handling. <a href='https://support.google.com/mail/answer/118708?hl=en' target='_blank'>Learn more</a>"
+                },
+                {
+                    "question": "What is an effective use of data labels for classification and security purposes?",
+                    "shortQuestion": "Best use of data labels?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Changing the color of file icons based on who created them.",
+                        "Automatically moving files to different folders based on their creation date.",
+                        "Using file names that include keywords related to the file's content.",
+                        "Applying labels to files based on their content and sensitivity."
+                    ],
+                    "correctAnswer": 3,
+                    "quizName": "Classify data",
+                    "cofficient": 1,
+                    "note": "Labels enable classification tied to security policies like DLP. <a href='https://support.google.com/a/answer/10075155' target='_blank'>Read more</a>"
+                }
+            ]
         }
     ]
 }
