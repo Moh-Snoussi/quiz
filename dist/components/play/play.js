@@ -97,8 +97,8 @@ export default class Play extends BaseComponent {
         this.container.appendChild(results);
 
         // scroll to the bottom of the page
-        this.container.scrollTo({
-            top: this.container.scrollHeight,
+        window.scrollTo({
+            height: document.body.scrollHeight,
             behavior: 'smooth'
         });
     }

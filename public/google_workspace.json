@@ -652,6 +652,294 @@
                     "note": "Labels enable classification tied to security policies like DLP. <a href='https://support.google.com/a/answer/10075155' target='_blank'>Read more</a>"
                 }
             ]
+        },
+        {
+            "title": "Data Loss Prevention",
+            "description": "Quiz: Data Loss Prevention. Your score: 100% Passing score: 80%. Congratulations! You passed this assessment.",
+            "questions": [
+                {
+                    "question": "Which elements of a Data Loss Prevention (DLP) notification message can you customize in Google Chat?",
+                    "shortQuestion": "DLP notification customization?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "The recipient of the notification.",
+                        "The media, like images or videos, that appear in a notification message.",
+                        "The text and/or links included in the notification message.",
+                        "The appearance of the notification, such as the background color or font size."
+                    ],
+                    "correctAnswer": 2,
+                    "quizName": "Data Loss Prevention",
+                    "cofficient": 2,
+                    "note": "Google Workspace allows you to customize DLP notifications to include helpful guidance. <a href='https://support.google.com/a/answer/7642799'>More info</a>"
+                },
+                {
+                    "question": "Where can you apply DLP rules to protect confidential financial information in Google Workspace?",
+                    "shortQuestion": "DLP financial protection?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Google Sites",
+                        "Google Chat",
+                        "Google Keep",
+                        "Google Calendar"
+                    ],
+                    "correctAnswer": 1,
+                    "quizName": "Data Loss Prevention",
+                    "cofficient": 2,
+                    "note": "Google Chat supports DLP rules to prevent sensitive data sharing. <a href='https://support.google.com/a/answer/10092209'>See supported services</a>"
+                },
+                {
+                    "question": "How can a healthcare organization use DLP to prevent sharing of files with PHI?",
+                    "shortQuestion": "DLP for PHI?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Allow files to be shared, but display a warning message.",
+                        "Quarantine files for security team review.",
+                        "Prevent files from being shared externally.",
+                        "Redact sensitive information before sharing."
+                    ],
+                    "correctAnswer": 2,
+                    "quizName": "Data Loss Prevention",
+                    "cofficient": 2,
+                    "note": "Preventing external sharing ensures compliance with regulations. <a href='https://support.google.com/a/answer/9495026'>Learn more</a>"
+                },
+                {
+                    "question": "What is essential when configuring a Context-Aware Access (CAA) condition for DLP to block file sharing based on employee ID numbers?",
+                    "shortQuestion": "CAA config for ID numbers?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "The location of the files containing the ID numbers.",
+                        "The sensitivity level assigned to the files.",
+                        "The specific format and structure of the employee ID numbers.",
+                        "The list of users who have access to the files."
+                    ],
+                    "correctAnswer": 2,
+                    "quizName": "Data Loss Prevention",
+                    "cofficient": 2,
+                    "note": "CAA relies on detecting patterns using regular expressions. <a href='https://support.google.com/a/answer/9271244'>See regex usage</a>"
+                },
+                {
+                    "question": "What crucial step is needed to enforce company-managed device restrictions with CAA in a Drive DLP rule?",
+                    "shortQuestion": "CAA and device restrictions?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Implement a Google Cloud Armor policy.",
+                        "Set up an email alert to the user's manager.",
+                        "Enable Endpoint Verification and create an 'Admin-approved' access level.",
+                        "Configure a DLP rule to quarantine files with specific keywords."
+                    ],
+                    "correctAnswer": 2,
+                    "quizName": "Data Loss Prevention",
+                    "cofficient": 2,
+                    "note": "CAA enforcement requires verified devices and specific access levels. <a href='https://support.google.com/accesscontext/answer/9282959'>Set up Endpoint Verification</a>"
+                }
+            ]
+        },
+        {
+            "title": "Google Vault",
+            "description": "Quiz: Google Vault. Your score: 40% Passing score: 80%. Unfortunately, you need at least 80% to pass this assessment. Review your answers and try again.",
+            "questions": [
+                {
+                    "question": "How can a company retain a terminated employee's data without keeping their license?",
+                    "shortQuestion": "Terminate and retain data?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Transfer data to another account and delete the original.",
+                        "Delete the account and use Google Vault to retain data.",
+                        "Delete the account and rely on Google's automatic retention.",
+                        "Suspend account and manually export data."
+                    ],
+                    "correctAnswer": 1,
+                    "quizName": "Google Vault",
+                    "cofficient": 2,
+                    "note": "Google Vault retains data even without an active license. <a href='https://support.google.com/vault/answer/7657594'>Read more</a>"
+                },
+                {
+                    "question": "What are the correct steps to export emails for a product launch from Google Vault?",
+                    "shortQuestion": "Export campaign emails?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Create a matter, define search terms, export results.",
+                        "Forward emails to a designated account and configure a retention rule.",
+                        "Define search terms and place a legal hold.",
+                        "Create a matter, define search terms, configure a retention rule."
+                    ],
+                    "correctAnswer": 0,
+                    "quizName": "Google Vault",
+                    "cofficient": 2,
+                    "note": "Matters and search exports are core Vault workflows. <a href='https://support.google.com/vault/answer/2462365'>Vault export guide</a>"
+                },
+                {
+                    "question": "What retention rule should a financial institution use to meet a 7-year email retention requirement?",
+                    "shortQuestion": "7-year retention?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Default retention rule for Gmail set to 7 years.",
+                        "Place a legal hold on all accounts.",
+                        "Export emails every 7 years to storage.",
+                        "Create a custom rule for each account."
+                    ],
+                    "correctAnswer": 0,
+                    "quizName": "Google Vault",
+                    "cofficient": 2,
+                    "note": "Default rules apply broadly and ensure consistent compliance. <a href='https://support.google.com/vault/answer/2462365#retention'>Compliance settings</a>"
+                },
+                {
+                    "question": "How can a company prepare for a legal audit using Google Vault?",
+                    "shortQuestion": "Vault for legal audit?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Disable employee accounts.",
+                        "Create a matter and place a hold.",
+                        "Create a retention rule.",
+                        "Export all data to separate storage."
+                    ],
+                    "correctAnswer": 1,
+                    "quizName": "Google Vault",
+                    "cofficient": 2,
+                    "note": "Holds ensure preservation of relevant data. <a href='https://support.google.com/vault/answer/2462365#holds'>Legal hold best practices</a>"
+                },
+                {
+                    "question": "How do audit reports in Vault help monitor employee use?",
+                    "shortQuestion": "Vault audit reports?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Ensure compliance with regulations.",
+                        "Identify data breaches.",
+                        "Track productivity.",
+                        "Analyze search query effectiveness."
+                    ],
+                    "correctAnswer": 1,
+                    "quizName": "Google Vault",
+                    "cofficient": 2,
+                    "note": "Audit reports help monitor user actions and detect misuse. <a href='https://support.google.com/vault/answer/2462365#audit'>Audit log usage</a>"
+                }
+            ]
+        },
+        {
+            "title": "Store and Export Data",
+            "description": "Quiz: Store and export data. Your score: 100% Passing score: 66%. Congratulations! You passed this assessment.",
+            "questions": [
+                {
+                    "question": "Your organization wants to allow employees to download their Google Calendar data using Google Takeout, but prevent them from downloading their Gmail data. How can you configure Takeout to achieve this?",
+                    "shortQuestion": "Selective Takeout control?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "This is not possible because Google Takeout settings for Google Drive, Gmail, Google Calendar, and Contacts are controlled as a single collection.",
+                        "Disable Google Takeout just for Gmail.",
+                        "Enable Google Takeout just for Google Calendar.",
+                        "This is not possible because Google Takeout does not allow for selective data downloads."
+                    ],
+                    "correctAnswer": 0,
+                    "quizName": "Store and Export Data",
+                    "cofficient": 2,
+                    "note": "Google Takeout does not support granular control for core services. <a href='https://support.google.com/a/answer/100458'>Takeout control details</a>"
+                },
+                {
+                    "question": "Your company needs to export all data from its Google Workspace environment for a compliance audit. What crucial security requirement should be completed before getting started?",
+                    "shortQuestion": "Pre-export requirement?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Obtain written consent from all users before exporting their data.",
+                        "Notify all users that their data will be exported.",
+                        "Create a new Google Cloud Storage bucket to store the exported data.",
+                        "Enable 2-Step Verification for the Administrator account initiating the export."
+                    ],
+                    "correctAnswer": 3,
+                    "quizName": "Store and Export Data",
+                    "cofficient": 2,
+                    "note": "2SV adds an extra layer of security. <a href='https://support.google.com/a/answer/100458'>Export tool requirements</a>"
+                },
+                {
+                    "question": "A research institution in Switzerland must comply with data sovereignty laws requiring all research data to be stored within the country. How can the institution ensure its Google Workspace data is stored in Switzerland?",
+                    "shortQuestion": "Data sovereignty compliance?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Disable local data storage, and rely on Google's default data storage locations.",
+                        "Enable local data storage, and select a data region within Switzerland.",
+                        "Enable local data storage, and select a data region in Europe.",
+                        "Use Google Takeout to regularly export all user data to a local server in Switzerland."
+                    ],
+                    "correctAnswer": 2,
+                    "quizName": "Store and Export Data",
+                    "cofficient": 2,
+                    "note": "Selecting Europe helps comply with Swiss data sovereignty laws. <a href='https://support.google.com/a/answer/9223653'>Data regions in Workspace</a>"
+                },
+                {
+                    "question": "Which of the following tools allows users to schedule exports every two months for a year?",
+                    "shortQuestion": "Export scheduling?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Google Takeout",
+                        "Google Admin Console",
+                        "Data Export Tool",
+                        "Google Cloud Storage"
+                    ],
+                    "correctAnswer": 0,
+                    "quizName": "Store and Export Data",
+                    "cofficient": 1,
+                    "note": "Google Takeout supports scheduled exports. <a href='https://takeout.google.com/'>Learn more about Takeout</a>"
+                },
+                {
+                    "question": "Who can access the data exported using the Admin Console's Data Export tool?",
+                    "shortQuestion": "Data Export access?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "All users in the organization",
+                        "Only Admins with edit rights",
+                        "Only Super Admins",
+                        "Any user who has a link to the archive"
+                    ],
+                    "correctAnswer": 2,
+                    "quizName": "Store and Export Data",
+                    "cofficient": 1,
+                    "note": "Data export archives are restricted to Super Admins. <a href='https://support.google.com/a/answer/100458'>Admin export details</a>"
+                },
+                {
+                    "question": "What limitation applies to exporting shared drive content using the Data Export tool?",
+                    "shortQuestion": "Shared drive export?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "All files in shared drives are always exported.",
+                        "Only Super Admins can export shared drive data.",
+                        "Files must be created after a certain date.",
+                        "Only user-owned files are exported; shared drive content is excluded."
+                    ],
+                    "correctAnswer": 3,
+                    "quizName": "Store and Export Data",
+                    "cofficient": 2,
+                    "note": "Data Export tool excludes files not owned by users. <a href='https://support.google.com/a/answer/100458'>Read more</a>"
+                },
+                {
+                    "question": "Which Workspace editions support data region policies?",
+                    "shortQuestion": "Data region support?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Only Enterprise Plus",
+                        "Business and Enterprise editions (Standard/Plus), Education Standard/Plus, Enterprise Essentials Plus",
+                        "Only Google Workspace for Education",
+                        "Only Business Starter"
+                    ],
+                    "correctAnswer": 1,
+                    "quizName": "Store and Export Data",
+                    "cofficient": 2,
+                    "note": "Not all editions support data regions. <a href='https://support.google.com/a/answer/9223653'>Eligible editions</a>"
+                },
+                {
+                    "question": "What happens if an admin loses Super Admin privileges during a data export?",
+                    "shortQuestion": "Export permission loss?",
+                    "type": "multiple-choice",
+                    "answers": [
+                        "Export continues and access is granted to other admins.",
+                        "Export is paused until permissions are restored.",
+                        "Export is cancelled and others are notified.",
+                        "Export is completed but user access is removed."
+                    ],
+                    "correctAnswer": 2,
+                    "quizName": "Store and Export Data",
+                    "cofficient": 2,
+                    "note": "Exports stop if Super Admin status is lost. <a href='https://support.google.com/a/answer/100458'>More details</a>"
+                }
+            ]
         }
     ]
 }
