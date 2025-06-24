@@ -1,0 +1,296 @@
+{
+  "title": "Mastering Model Context Protocol (MCP)",
+  "description": "An in-depth course on understanding, implementing, and deploying applications using the Model Context Protocol (MCP).",
+  "passingScore": 4,
+  "sections": [
+    {
+      "title": "Introduction to MCP",
+      "description": "Overview of MCP, its purpose, and significance in AI applications.",
+      "questions": [
+        {
+          "question": "What is the primary purpose of Model Context Protocol (MCP)?",
+          "shortQuestion": "Purpose of MCP?",
+          "type": "multiple-choice",
+          "answers": [
+            "To limit the training data of AI models",
+            "To enable AI models to connect with external data sources, tools, and environments",
+            "To replace prompting when using Large Language Models",
+            "To create a new programming language for AI"
+          ],
+          "correctAnswer": 1,
+          "quizName": "MCP Fundamentals",
+          "cofficient": 2,
+          "note": "Understanding MCP's role is crucial. <a href='https://huggingface.co/learn/mcp-course/en/unit1/introduction'>Read more</a>"
+        },
+        {
+          "question": "What problem does MCP primarily aim to solve?",
+          "shortQuestion": "MCP solves which problem?",
+          "type": "multiple-choice",
+          "answers": [
+            "The lack of AI models",
+            "The high cost of training LLMs",
+            "The M×N Integration Problem",
+            "The difficulty in creating new AI algorithms"
+          ],
+          "correctAnswer": 2,
+          "quizName": "MCP Fundamentals",
+          "cofficient": 2,
+          "note": "MCP addresses integration challenges. <a href='https://huggingface.co/learn/mcp-course/en/unit1/introduction'>Learn more</a>"
+        }
+      ]
+    },
+    {
+      "title": "MCP Capabilities",
+      "description": "Deep dive into the core primitives of MCP: Tools, Resources, Prompts, and Sampling.",
+      "questions": [
+        {
+          "question": "Which of the following is NOT a core primitive of MCP?",
+          "shortQuestion": "Non-core MCP primitive?",
+          "type": "multiple-choice",
+          "answers": [
+            "Tools",
+            "Resources",
+            "Prompts",
+            "Modules"
+          ],
+          "correctAnswer": 3,
+          "quizName": "MCP Capabilities",
+          "cofficient": 2,
+          "note": "Familiarize yourself with MCP's core components. <a href='https://huggingface.co/learn/mcp-course/en/unit1/capabilities'>Details here</a>"
+        },
+        {
+          "question": "In MCP, what is the role of 'Sampling'?",
+          "shortQuestion": "Role of Sampling?",
+          "type": "multiple-choice",
+          "answers": [
+            "Provides read-only access to data sources",
+            "Executable functions invoked by the AI model",
+            "Predefined templates guiding interactions",
+            "Allows servers to request the client to perform LLM interactions"
+          ],
+          "correctAnswer": 3,
+          "quizName": "MCP Capabilities",
+          "cofficient": 2,
+          "note": "Sampling enables server-driven agentic behaviors. <a href='https://huggingface.co/learn/mcp-course/en/unit1/capabilities'>Explore more</a>"
+        }
+      ]
+    },
+    {
+      "title": "Building with MCP",
+      "description": "Practical implementation of MCP servers and clients using available SDKs and frameworks.",
+      "questions": [
+        {
+          "question": "Which framework is used to create a web interface and MCP server in the course's end-to-end project?",
+          "shortQuestion": "Framework for MCP server?",
+          "type": "multiple-choice",
+          "answers": [
+            "FastAPI",
+            "Gradio",
+            "Django",
+            "Flask"
+          ],
+          "correctAnswer": 1,
+          "quizName": "MCP Implementation",
+          "cofficient": 2,
+          "note": "Gradio simplifies building MCP servers. <a href='https://huggingface.co/learn/mcp-course/en/unit2/introduction'>See implementation</a>"
+        },
+        {
+          "question": "What is the primary function of the 'analyze_file_changes' tool in the PR Agent project?",
+          "shortQuestion": "Function of 'analyze_file_changes'?",
+          "type": "multiple-choice",
+          "answers": [
+            "Retrieves git diff information and changed files",
+            "Lists available PR templates",
+            "Allows Claude to recommend the most appropriate template",
+            "Deploys the MCP server to Hugging Face Spaces"
+          ],
+          "correctAnswer": 0,
+          "quizName": "MCP Tools",
+          "cofficient": 2,
+          "note": "Understanding tool functions is key. <a href='https://huggingface.co/learn/mcp-course/unit3/build-mcp-server'>Detailed guide</a>"
+        }
+      ]
+    },
+    {
+      "title": "Advanced MCP Development",
+      "description": "Exploration of advanced MCP features, architecture, and real-world integration patterns.",
+      "questions": [
+        {
+          "question": "What is the recommended approach when MCP tool responses exceed the 25,000 token limit?",
+          "shortQuestion": "Handling token limit?",
+          "type": "multiple-choice",
+          "answers": [
+            "Ignore the limit and proceed",
+            "Implement output limiting strategies like truncating large responses",
+            "Split the response into multiple parts without truncation",
+            "Avoid using tools that generate large outputs"
+          ],
+          "correctAnswer": 1,
+          "quizName": "MCP Constraints",
+          "cofficient": 2,
+          "note": "Managing output sizes ensures reliability. <a href='https://huggingface.co/learn/mcp-course/unit3/build-mcp-server'>Learn how</a>"
+        },
+        {
+          "question": "In the context of MCP, what does the 'get_pr_templates' tool do?",
+          "shortQuestion": "Role of 'get_pr_templates'?",
+          "type": "multiple-choice",
+          "answers": [
+            "Analyzes code changes",
+            "Manages and returns PR templates",
+            "Suggests the most appropriate template",
+            "Deploys the MCP server"
+          ],
+          "correctAnswer": 1,
+          "quizName": "MCP Tools",
+          "cofficient": 2,
+          "note": "Tool functions are integral to MCP workflows. <a href='https://huggingface.co/learn/mcp-course/unit3/build-mcp-server'>Explore tools</a>"
+        }
+      ]
+    }
+    ,
+    {
+      "title": "Introduction to MCP",
+      "description": "Overview of MCP, its purpose, and significance in AI applications.",
+      "questions": [
+        {
+          "question": "What is the primary purpose of Model Context Protocol (MCP)?",
+          "shortQuestion": "Purpose of MCP?",
+          "type": "multiple-choice",
+          "answers": [
+            "To limit the training data of AI models",
+            "To enable AI models to connect with external data sources, tools, and environments",
+            "To replace prompting when using Large Language Models",
+            "To create a new programming language for AI"
+          ],
+          "correctAnswer": 1,
+          "quizName": "MCP Fundamentals",
+          "cofficient": 2,
+          "note": "Understanding MCP's role is crucial. <a href='https://huggingface.co/learn/mcp-course/en/unit1/introduction'>Read more</a>"
+        },
+        {
+          "question": "What problem does MCP primarily aim to solve?",
+          "shortQuestion": "MCP solves which problem?",
+          "type": "multiple-choice",
+          "answers": [
+            "The lack of AI models",
+            "The high cost of training LLMs",
+            "The M×N Integration Problem",
+            "The difficulty in creating new AI algorithms"
+          ],
+          "correctAnswer": 2,
+          "quizName": "MCP Fundamentals",
+          "cofficient": 2,
+          "note": "MCP addresses integration challenges. <a href='https://huggingface.co/learn/mcp-course/en/unit1/introduction'>Learn more</a>"
+        }
+      ]
+    },
+    {
+      "title": "MCP Capabilities",
+      "description": "Deep dive into the core primitives of MCP: Tools, Resources, Prompts, and Sampling.",
+      "questions": [
+        {
+          "question": "Which of the following is NOT a core primitive of MCP?",
+          "shortQuestion": "Non-core MCP primitive?",
+          "type": "multiple-choice",
+          "answers": [
+            "Tools",
+            "Resources",
+            "Prompts",
+            "Modules"
+          ],
+          "correctAnswer": 3,
+          "quizName": "MCP Capabilities",
+          "cofficient": 2,
+          "note": "Familiarize yourself with MCP's core components. <a href='https://huggingface.co/learn/mcp-course/en/unit1/capabilities'>Details here</a>"
+        },
+        {
+          "question": "In MCP, what is the role of 'Sampling'?",
+          "shortQuestion": "Role of Sampling?",
+          "type": "multiple-choice",
+          "answers": [
+            "Provides read-only access to data sources",
+            "Executable functions invoked by the AI model",
+            "Predefined templates guiding interactions",
+            "Allows servers to request the client to perform LLM interactions"
+          ],
+          "correctAnswer": 3,
+          "quizName": "MCP Capabilities",
+          "cofficient": 2,
+          "note": "Sampling enables server-driven agentic behaviors. <a href='https://huggingface.co/learn/mcp-course/en/unit1/capabilities'>Explore more</a>"
+        }
+      ]
+    },
+    {
+      "title": "Building with MCP",
+      "description": "Practical implementation of MCP servers and clients using available SDKs and frameworks.",
+      "questions": [
+        {
+          "question": "Which framework is used to create a web interface and MCP server in the course's end-to-end project?",
+          "shortQuestion": "Framework for MCP server?",
+          "type": "multiple-choice",
+          "answers": [
+            "FastAPI",
+            "Gradio",
+            "Django",
+            "Flask"
+          ],
+          "correctAnswer": 1,
+          "quizName": "MCP Implementation",
+          "cofficient": 2,
+          "note": "Gradio simplifies building MCP servers. <a href='https://huggingface.co/learn/mcp-course/en/unit2/introduction'>See implementation</a>"
+        },
+        {
+          "question": "What is the primary function of the 'analyze_file_changes' tool in the PR Agent project?",
+          "shortQuestion": "Function of 'analyze_file_changes'?",
+          "type": "multiple-choice",
+          "answers": [
+            "Retrieves git diff information and changed files",
+            "Lists available PR templates",
+            "Allows Claude to recommend the most appropriate template",
+            "Deploys the MCP server to Hugging Face Spaces"
+          ],
+          "correctAnswer": 0,
+          "quizName": "MCP Tools",
+          "cofficient": 2,
+          "note": "Understanding tool functions is key. <a href='https://huggingface.co/learn/mcp-course/unit3/build-mcp-server'>Detailed guide</a>"
+        }
+      ]
+    },
+    {
+      "title": "Advanced MCP Development",
+      "description": "Exploration of advanced MCP features, architecture, and real-world integration patterns.",
+      "questions": [
+        {
+          "question": "What is the recommended approach when MCP tool responses exceed the 25,000 token limit?",
+          "shortQuestion": "Handling token limit?",
+          "type": "multiple-choice",
+          "answers": [
+            "Ignore the limit and proceed",
+            "Implement output limiting strategies like truncating large responses",
+            "Split the response into multiple parts without truncation",
+            "Avoid using tools that generate large outputs"
+          ],
+          "correctAnswer": 1,
+          "quizName": "MCP Constraints",
+          "cofficient": 2,
+          "note": "Managing output sizes ensures reliability. <a href='https://huggingface.co/learn/mcp-course/unit3/build-mcp-server'>Learn how</a>"
+        },
+        {
+          "question": "In the context of MCP, what does the 'get_pr_templates' tool do?",
+          "shortQuestion": "Role of 'get_pr_templates'?",
+          "type": "multiple-choice",
+          "answers": [
+            "Analyzes code changes",
+            "Manages and returns PR templates",
+            "Suggests the most appropriate template",
+            "Deploys the MCP server"
+          ],
+          "correctAnswer": 1,
+          "quizName": "MCP Tools",
+          "cofficient": 2,
+          "note": "Tool functions are integral to MCP workflows. <a href='https://huggingface.co/learn/mcp-course/unit3/build-mcp-server'>Explore tools</a>"
+        }
+      ]
+    }
+  ]
+}
