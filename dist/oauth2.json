@@ -1,0 +1,259 @@
+{
+  "title": "Mastering OAuth 2.0: A Comprehensive Guide",
+  "description": "This course offers an in-depth exploration of OAuth 2.0, covering its core concepts, grant types, security considerations, and real-world implementations. Designed for developers and security professionals, it provides both theoretical knowledge and practical exercises to ensure a robust understanding of OAuth 2.0.",
+  "passingScore": 8,
+  "sections": [
+    {
+      "title": "Introduction to OAuth 2.0",
+      "description": "Understand the fundamentals of OAuth 2.0, its purpose, and the problems it solves in modern web applications.",
+      "questions": [
+        {
+          "question": "What is the primary purpose of OAuth 2.0?",
+          "shortQuestion": "Purpose of OAuth 2.0?",
+          "type": "multiple-choice",
+          "answers": [
+            "To authenticate users across multiple platforms.",
+            "To authorize third-party applications to access user data without exposing credentials.",
+            "To encrypt data transmitted over the internet.",
+            "To manage user sessions in web applications."
+          ],
+          "correctAnswer": 1,
+          "quizName": "OAuth Basics",
+          "cofficient": 2,
+          "note": "OAuth 2.0 is primarily an authorization framework, not an authentication protocol. <a href='https://oauth.net/2/'>Learn more</a>"
+        },
+        {
+          "question": "Which of the following is NOT a role defined in the OAuth 2.0 specification?",
+          "shortQuestion": "Undefined OAuth role?",
+          "type": "multiple-choice",
+          "answers": [
+            "Resource Owner",
+            "Client",
+            "Authorization Server",
+            "Authentication Server"
+          ],
+          "correctAnswer": 3,
+          "quizName": "OAuth Roles",
+          "cofficient": 2,
+          "note": "OAuth 2.0 defines 'Authorization Server' but not 'Authentication Server'. <a href='https://tools.ietf.org/html/rfc6749#section-1.1'>RFC 6749 Section 1.1</a>"
+        }
+      ]
+    },
+    {
+      "title": "OAuth 2.0 Grant Types",
+      "description": "Dive into the different grant types defined in OAuth 2.0 and understand their appropriate use cases.",
+      "questions": [
+        {
+          "question": "Which grant type is most suitable for server-side applications where the client secret can be securely stored?",
+          "shortQuestion": "Best grant for server-side apps?",
+          "type": "multiple-choice",
+          "answers": [
+            "Implicit Grant",
+            "Authorization Code Grant",
+            "Resource Owner Password Credentials Grant",
+            "Client Credentials Grant"
+          ],
+          "correctAnswer": 1,
+          "quizName": "Grant Types",
+          "cofficient": 3,
+          "note": "Authorization Code Grant is ideal for server-side apps. <a href='https://tools.ietf.org/html/rfc6749#section-4.1'>RFC 6749 Section 4.1</a>"
+        },
+        {
+          "question": "Which grant type is recommended for mobile and native applications to enhance security?",
+          "shortQuestion": "Secure grant for mobile apps?",
+          "type": "multiple-choice",
+          "answers": [
+            "Implicit Grant",
+            "Client Credentials Grant",
+            "Authorization Code Grant with PKCE",
+            "Resource Owner Password Credentials Grant"
+          ],
+          "correctAnswer": 2,
+          "quizName": "Grant Types",
+          "cofficient": 3,
+          "note": "PKCE enhances security for public clients like mobile apps. <a href='https://tools.ietf.org/html/rfc7636'>RFC 7636</a>"
+        }
+      ]
+    },
+    {
+      "title": "Security Considerations in OAuth 2.0",
+      "description": "Explore common security vulnerabilities in OAuth 2.0 implementations and best practices to mitigate them.",
+      "questions": [
+        {
+          "question": "What is the purpose of the 'state' parameter in OAuth 2.0 authorization requests?",
+          "shortQuestion": "Purpose of 'state' parameter?",
+          "type": "multiple-choice",
+          "answers": [
+            "To maintain user session information.",
+            "To carry access tokens between requests.",
+            "To prevent Cross-Site Request Forgery (CSRF) attacks.",
+            "To specify the scope of access requested."
+          ],
+          "correctAnswer": 2,
+          "quizName": "OAuth Security",
+          "cofficient": 3,
+          "note": "The 'state' parameter helps prevent CSRF attacks. <a href='https://tools.ietf.org/html/rfc6749#section-10.12'>RFC 6749 Section 10.12</a>"
+        },
+        {
+          "question": "Why is the Implicit Grant type generally discouraged in modern applications?",
+          "shortQuestion": "Why avoid Implicit Grant?",
+          "type": "multiple-choice",
+          "answers": [
+            "It requires complex server-side configurations.",
+            "It exposes access tokens in URLs, increasing the risk of token leakage.",
+            "It does not support refresh tokens.",
+            "It is incompatible with mobile applications."
+          ],
+          "correctAnswer": 1,
+          "quizName": "OAuth Security",
+          "cofficient": 3,
+          "note": "Implicit Grant exposes tokens in URLs, posing security risks. <a href='https://tools.ietf.org/html/draft-ietf-oauth-security-topics-13#section-2.1'>OAuth 2.0 Security Best Current Practice</a>"
+        }
+      ]
+    },
+    {
+      "title": "Implementing OAuth 2.0",
+      "description": "Gain practical experience by implementing OAuth 2.0 in various application scenarios.",
+      "questions": [
+        {
+          "question": "In the Authorization Code Grant flow, what is the correct sequence of steps?",
+          "shortQuestion": "Authorization Code flow steps?",
+          "type": "multiple-choice",
+          "answers": [
+            "Client requests token → Authorization Server issues code → User authenticates",
+            "User authenticates → Client receives access token → Authorization Server issues code",
+            "Client directs user to Authorization Server → User authenticates and authorizes → Authorization Server redirects with code → Client exchanges code for access token",
+            "Authorization Server authenticates user → Client receives access token directly"
+          ],
+          "correctAnswer": 2,
+          "quizName": "OAuth Implementation",
+          "cofficient": 4,
+          "note": "Understanding the correct flow ensures secure implementation. <a href='https://tools.ietf.org/html/rfc6749#section-4.1'>RFC 6749 Section 4.1</a>"
+        },
+        {
+          "question": "What is the role of refresh tokens in OAuth 2.0?",
+          "shortQuestion": "Purpose of refresh tokens?",
+          "type": "multiple-choice",
+          "answers": [
+            "To authenticate the client application.",
+            "To obtain new access tokens without user interaction.",
+            "To revoke access tokens when no longer needed.",
+            "To extend the expiration time of access tokens."
+          ],
+          "correctAnswer": 1,
+          "quizName": "OAuth Implementation",
+          "cofficient": 4,
+          "note": "Refresh tokens allow clients to obtain new access tokens without user involvement. <a href='https://tools.ietf.org/html/rfc6749#section-6'>RFC 6749 Section 6</a>"
+        }
+      ]
+    },
+    {
+      "title": "OAuth 2.0 in Practice",
+      "description": "Analyze real-world scenarios and case studies to understand the application of OAuth 2.0 in various contexts.",
+      "questions": [
+        {
+          "question": "Which of the following services commonly use OAuth 2.0 for authorization?",
+          "shortQuestion": "Services using OAuth 2.0?",
+          "type": "multiple-choice",
+          "answers": [
+            "Google APIs",
+            "Facebook Login",
+            "GitHub API",
+            "All of the above"
+          ],
+          "correctAnswer": 3,
+          "quizName": "OAuth in Practice",
+          "cofficient": 2,
+          "note": "Many major platforms implement OAuth 2.0 for secure authorization. <a href='https://oauth.net/2/'>OAuth 2.0 Implementations</a>"
+        },
+        {
+          "question": "In a microservices architecture, how can OAuth 2.0 be utilized to secure inter-service communication?",
+          "shortQuestion": "OAuth in microservices?",
+          "type": "multiple-choice",
+          "answers": [
+            "By using shared API keys across services.",
+            "By implementing session-based authentication.",
+            "By issuing access tokens for service-to-service authorization.",
+            "By relying solely on network-level security measures."
+          ],
+          "correctAnswer": 2,
+          "quizName": "OAuth in Practice",
+          "cofficient": 3,
+          "note": "Access tokens can secure inter-service communication in microservices. <a href='https://tools.ietf.org/html/rfc6749'>RFC 6749</a>"
+        }
+      ]
+    },
+    {
+      "title": "Advanced Security Practices",
+      "description": "Explore advanced security considerations and best practices in OAuth 2.0 implementations.",
+      "questions": [
+        {
+          "question": "What is the primary purpose of using Proof Key for Code Exchange (PKCE) in OAuth 2.0?",
+          "shortQuestion": "Purpose of PKCE?",
+          "type": "multiple-choice",
+          "answers": [
+            "To encrypt access tokens during transmission.",
+            "To prevent authorization code interception attacks.",
+            "To allow clients to obtain refresh tokens.",
+            "To enable single sign-on capabilities."
+          ],
+          "correctAnswer": 1,
+          "quizName": "Advanced Security",
+          "cofficient": 3,
+          "note": "PKCE enhances security by mitigating authorization code interception attacks. <a href='https://tools.ietf.org/html/rfc7636'>RFC 7636</a>"
+        },
+        {
+          "question": "Why should access tokens have a limited lifespan in OAuth 2.0?",
+          "shortQuestion": "Why limit access token lifespan?",
+          "type": "multiple-choice",
+          "answers": [
+            "To reduce the risk of token misuse if compromised.",
+            "To comply with GDPR regulations.",
+            "To improve application performance.",
+            "To allow indefinite access to resources."
+          ],
+          "correctAnswer": 0,
+          "quizName": "Advanced Security",
+          "cofficient": 3,
+          "note": "Short-lived tokens minimize the window of opportunity for misuse if compromised. <a href='https://oauth.net/2/oauth-best-practice/'>OAuth 2.0 Security Best Current Practice</a>"
+        }
+      ]
+    },
+    {
+      "title": "Real-World Applications",
+      "description": "Understand how OAuth 2.0 is applied in real-world scenarios and platforms.",
+      "questions": [
+        {
+          "question": "Which OAuth 2.0 grant type is most suitable for machine-to-machine communication?",
+          "shortQuestion": "Best grant for M2M communication?",
+          "type": "multiple-choice",
+          "answers": [
+            "Authorization Code Grant",
+            "Implicit Grant",
+            "Client Credentials Grant",
+            "Resource Owner Password Credentials Grant"
+          ],
+          "correctAnswer": 2,
+          "quizName": "Real-World Applications",
+          "cofficient": 2,
+          "note": "Client Credentials Grant is ideal for server-to-server interactions without user involvement. <a href='https://tools.ietf.org/html/rfc6749#section-4.4'>RFC 6749 Section 4.4</a>"
+        },
+        {
+          "question": "In the context of OAuth 2.0, what does 'scope' define?",
+          "shortQuestion": "Definition of 'scope'?",
+          "type": "multiple-choice",
+          "answers": [
+            "The duration of the access token.",
+            "The specific actions a client can perform on resources.",
+            "The client's IP address range.",
+            "The encryption algorithm used for tokens."
+          ],
+          "correctAnswer": 1,
+          "quizName": "Real-World Applications",
+          "cofficient": 2,
+          "note": "Scopes specify the level of access requested by the client. <a href='https://tools.ietf.org/html/rfc6749#section-3.3'>RFC 6749 Section 3.3</a>"
+        }
+      ]
+    }
+  ]
+}
